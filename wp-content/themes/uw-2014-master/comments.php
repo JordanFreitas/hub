@@ -16,3 +16,4 @@ what is this going to be wit php
       $buttontext = get_post_meta($post->ID, "buttontext");
       $buttonlink = get_post_meta($post->ID, "buttonlink");   ?>
 
+<h1 class="findTitle">Find the HUB</h1>

@@ -10847,8 +10847,10 @@ transition: all 0.3s ease-in;
 }
 
 /*FIND SECTION*/
+.findContact{
+margin-top: -1%;
+}
 .findSect{
-    height: 100vh;
     width: 100%;}
 #map{
     height: 50vh;
@@ -10857,12 +10859,22 @@ transition: all 0.3s ease-in;
     line-height: 40px !important;
     font-size: 25px !important;
 }
+.findTop{
+background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/08/TheHUB-Lawn-1.png");
+
+    position: relative;
+}
 .findTitle{
+margin-top: 0px !important;
     text-align: center;
     font-size: 4em;
      overflow: hidden;
     padding-bottom: 5%;
 padding-top: 5%;
+    z-index: 2;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    color: white !important;
 }
 .findTitle > span{
     position: relative;
@@ -10883,5 +10895,36 @@ padding-top: 5%;
     left: 100%;
 }
 div.uw-slideshow{
-    width: 140% !important;
-    left: -20%;}
+}
+.uw-body-home{
+padding-top: 0px !important;
+    width: 80%;
+}
+.hero-content-home{
+margin-top: 0px !important;
+padding-left: 0px !important;
+padding-right: 0px !important;}
+.homeHours{
+top: 75%;
+    right: 2%;
+    position: absolute;}
+.hourTime{
+    margin-bottom: 0px !important;
+    margin-top: 5px;
+    color: white !important;
+    text-align: right;}
+.hours{
+    margin-bottom: 0px !important;
+    color: white !important;
+    text-align: right;}
+.home-uw-links{
+margin-left: 0px !important;
+    width: 100%;
+}
+.getInvolvedTop{
+background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2016/04/GetInvolved.png");
+position:relative;
+}
+.widget-home{
+padding: 10px 0 0 20px;
+}

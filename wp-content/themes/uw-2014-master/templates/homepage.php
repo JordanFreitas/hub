@@ -64,7 +64,7 @@
 $(window).scroll(function(){
     $(".top-vid").css("opacity", 1 - $(window).scrollTop() / 250);
     $(".selectionHome").css("opacity", 1 - $(window).scrollTop() / 250);
-
+  $(".homeHours").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
 
@@ -83,7 +83,7 @@ function initMap() {
           zoom: 14
         });
 
-    // var iconBase = '../images/decervoMark.png';
+     var iconBase = 'https://furtaev.ru/preview/car_parking_map_pointer_small.png';
 
 
 
@@ -101,7 +101,8 @@ function initMap() {
     position: new google.maps.LatLng(47.660474, -122.308831),
     map: map,
     title: 'Padelford Parking Garage',
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
+    icon: iconBase
   });
 
   47.660474, -122.308831
