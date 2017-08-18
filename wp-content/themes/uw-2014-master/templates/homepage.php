@@ -26,11 +26,13 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-
+  	<!-- <link rel='stylesheet' id='admin-bar-css'  href='http://localhost/hub/wp-includes/css/admin-bar.min.css?ver=4.8.1' type='text/css' media='all' />		 -->
+<link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/homepage.css?ver=3.6' type='text/css' media='all' />
+<link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
-    
+
     <body <?php body_class(); ?> >
     <!--<![endif]-->
 
@@ -58,9 +60,10 @@
           endwhile;
           
         ?>
-
+<script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSjDgV_-XDhkm-WOaObh4m_O1sZs-Iz70&callback=initMap" ></script>
 <script>
+
 $(window).scroll(function(){
     $(".top-vid").css("opacity", 1 - $(window).scrollTop() / 250);
     $(".selectionHome").css("opacity", 1 - $(window).scrollTop() / 250);
@@ -80,7 +83,7 @@ $(window).scroll(function(){
 function initMap() {
        map = new google.maps.Map(document.getElementById('map'), {
           center: {lat:47.655498, lng:-122.305189},
-          zoom: 14
+          zoom: 15
         });
 
      var iconBase = 'https://furtaev.ru/preview/car_parking_map_pointer_small.png';

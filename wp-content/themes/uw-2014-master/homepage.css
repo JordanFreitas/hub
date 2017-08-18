@@ -1,5 +1,5 @@
 /*!
-Theme Name: UW 2014
+Theme Name: UW 2014 Jordan Freitas Additions
 Theme URI: washington.edu
 Description: The 2014 theme
 Author: UW Web Team
@@ -10928,6 +10928,14 @@ position:relative;
 }
 .widget-home{
 padding: 10px 0 0 20px;
+}
+
+/*explore section images*/
+.exploreImg{
+  height: 100% !important;
+}
+.exploreSlideCov{
+  background: rgba(0,0,0,.3);
 }
 
 /*----------------RESPONSIVE CHANGES TO HOMEPAGE-------------*/
