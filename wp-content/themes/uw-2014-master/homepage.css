@@ -10861,7 +10861,7 @@ margin-top: -1%;
     font-size: 25px !important;
 }
 .findTop{
-background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/08/TheHUB-Lawn-1.png");
+/* background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/08/TheHUB-Lawn-1.png"); */
 
     position: relative;
 }
@@ -10874,8 +10874,8 @@ margin-top: 0px !important;
 padding-top: 5%;
     z-index: 2;
     width: 100%;
-    background: rgba(0,0,0,.3);
-    color: white !important;
+    /* background: rgba(0,0,0,.3); */
+    /* color: white !important; */
 }
 .findTitle > span{
     position: relative;
@@ -10895,6 +10895,36 @@ padding-top: 5%;
 .findTitle > span:after{
     left: 100%;
 }
+.getInvolvedTitle{
+  margin-top: 0px !important;
+      text-align: center;
+      font-size: 4em;
+       overflow: hidden;
+      padding-bottom: 5%;
+  padding-top: 5%;
+      z-index: 2;
+      width: 100%;
+      background: rgba(0,0,0,.3);
+      color: white !important;
+  }
+  .getInvolvedTitle > span{
+      position: relative;
+      display: inline-block;
+  }
+  .getInvolvedTitle > span:before, .findTitle > span:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      border-bottom: 2px solid;
+          width: 50%;
+      margin: 0 40px;
+  }
+  .getInvolvedTitle > span:before{
+      right: 100%;
+  }
+  .getInvolvedTitle > span:after{
+      left: 100%;
+  }
 div.uw-slideshow{
 }
 .uw-body-home{
@@ -10939,3 +10969,25 @@ padding: 10px 0 0 20px;
 }
 
 /*----------------RESPONSIVE CHANGES TO HOMEPAGE-------------*/
+
+@media(max-width: 450px){
+  .home-uw-links{
+    display:none;
+  }
+  .findMapSect{
+    display:none;
+  }
+  .mapOptions{
+    padding: 0px;
+  }
+  .widget-home{
+    padding: 0px !important;
+  }
+  .widgettitle{
+    margin: 0px !important;
+  }
+  .findTitle{
+    display: none;
+  }
+
+}
