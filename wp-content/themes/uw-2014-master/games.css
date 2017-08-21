@@ -1,0 +1,61 @@
+.gamesTop{
+    height: 80vh;
+    position: static;
+}
+.gamesVid{
+    top: -68%;
+}
+.gamesVidTop-content{
+    height: 80vh;
+    position: static;
+    /* height: inherit; */
+    width: 100%;
+    /* position: absolute; */
+    background: rgba(0,0,0,0.3);
+    top: 0;
+    color: #fff;
+}
+.gamesVidInfo{
+    position: absolute;
+    /* text-align: center; */
+    top: 35%;
+    /* left: 0; */
+    width: 100%;
+    /* text-align: center; */
+    background: rgba(0,0,0,0);
+    color: #fff;
+    padding: 1rem;
+    font-family: Avenir, Helvetica, sans-serif;
+}
+.gameTitleCont{
+text-align: center !important;
+}
+.gamesVidLabel{
+    display: inline;
+}
+.gamesVidLabel:hover{
+    color: #4b2e83 !important;
+}
+.gamesVidReserve{
+    display: inline !important;
+}
+a.uw-btn:before{
+    background-color: #4B2E83 !important;
+}
+.uw-btn{
+    background-color: #e8e3d3 !important;
+    color: #5a5a5a !important;
+}
+.uw-btn:hover{
+    color: #85754d !important;
+    background-color: #f5f5f5 !important;
+}
+.gamesReserveBtn{
+    padding-top: 3%;
+}
+.game-title{
+    font-size: 150px !important;
+}
+.gameSocial{
+    display: inline-flex;
+}
