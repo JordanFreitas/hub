@@ -27,6 +27,7 @@
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
     <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6' type='text/css' media='all' />
+    <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
 
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
@@ -72,5 +73,6 @@
 
 
 <!-- </div> -->
+<script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>
 
 <?php get_footer(); ?>

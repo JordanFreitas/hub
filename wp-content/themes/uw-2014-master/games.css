@@ -22,7 +22,7 @@
     /* left: 0; */
     width: 100%;
     /* text-align: center; */
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,.4);
     color: #fff;
     padding: 1rem;
     font-family: Avenir, Helvetica, sans-serif;
@@ -58,4 +58,77 @@ a.uw-btn:before{
 }
 .gameSocial{
     display: inline-flex;
+}
+/*games contact*/
+.gameContact{
+    background-color: white;
+    position: relative;
+}
+.findTitle{
+    margin-top: 0px !important;
+        text-align: center;
+        font-size: 4em;
+         overflow: hidden;
+        padding-bottom: 5%;
+    padding-top: 5%;
+        z-index: 2;
+        width: 100%;
+        /* background: rgba(0,0,0,.3); */
+        /* color: white !important; */
+    }
+    .findTitle > span{
+        position: relative;
+        display: inline-block;
+    }
+    .findTitle > span:before, .findTitle > span:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 2px solid;
+            width: 50%;
+        margin: 0 40px;
+    }
+    .findTitle > span:before{
+        right: 100%;
+    }
+    .findTitle > span:after{
+        left: 100%;
+    }
+
+
+
+/*hub 4 item section*/
+.gameBlocks{
+    height: 50vh;
+    background-color: white;
+    color: whitesmoke;
+    font-family: "Encode Sans Compressed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 75px;
+    /* color: #fff; */
+    text-align: center;
+    padding-top: 5%;
+}
+.bowl{
+    background-image: url("https://1f05qp2e83qmgx1op26dvzig-wpengine.netdna-ssl.com/wp-content/uploads/2013/12/bowling.jpg");
+}
+.gaming{
+    background-image: url("https://www.choice.com.au/~/media/b2d5c0ee490d46bcaafa7068189d6793.ashx?jq=80&w=696&h=391");
+}
+.pool{
+    background-image: url("https://static1.squarespace.com/static/53606594e4b032825e5783cf/t/53608fdae4b032825e57ac0a/1398837215725/Billiards-Triangle-hd-wallpapers.jpg?format=1500w");
+}
+.pingPong{
+    background-image: url("http://i.ebayimg.com/00/s/NTY2WDg0OQ==/z/0eYAAOxydB1SnG2a/$_12.JPG?set_id=880000500F");
+}
+
+/*Reservation Section*/
+.reserveGames{
+    background-color: white;
+    height: 400px;
+}
+.gameType{
+    position: relative;
+    height: 100vh;
 }
