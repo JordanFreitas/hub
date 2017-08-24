@@ -129,10 +129,10 @@ a.uw-btn:before{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   } */
-  .bowlPic{
+  .bowl{
     background-image:     url("https://1f05qp2e83qmgx1op26dvzig-wpengine.netdna-ssl.com/wp-content/uploads/2013/12/bowling.jpg");
   }
-.bowl{
+.gameBlockCover{
     position: absolute;
     
     height: 100%;
@@ -160,14 +160,14 @@ a.uw-btn:before{
     font-size: 95px;
     margin-top: 12%;
 }
-.bowl:hover{
+.gameBlockCover:hover{
     background-color: rgba(0, 0, 0, 0.85);
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     
 }
-.bowl:hover .gameBlockBtn{
+.gameBlockCover:hover .gameBlockBtn{
 
     visibility: visible;
     opacity: 1;
@@ -179,21 +179,22 @@ a.uw-btn:before{
     )
 } */
 .gaming{
-    background: 
-    linear-gradient(
-        rgba(0, 0, 0, 0.45), 
-        rgba(0, 0, 0, 0.45)
-    ),
-    url("https://www.choice.com.au/~/media/b2d5c0ee490d46bcaafa7068189d6793.ashx?jq=80&w=696&h=391");
+    background-image: url("http://www.ampsych.com.au/wp-content/uploads/2017/01/Gaming-Addiction-Help-and-Therapy-Sydney.jpg");
+    background-position: center;
 }
 .pool{
-    background-image: url("https://static1.squarespace.com/static/53606594e4b032825e5783cf/t/53608fdae4b032825e57ac0a/1398837215725/Billiards-Triangle-hd-wallpapers.jpg?format=1500w");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/29/Billiards_and_snookers.jpg");
+
+    
 }
 .pingPong{
-    background-image: url("http://i.ebayimg.com/00/s/NTY2WDg0OQ==/z/0eYAAOxydB1SnG2a/$_12.JPG?set_id=880000500F");
+    background-image: url("http://www.nbcolympics.com/sites/default/files/field_image/01June2016/table-tennis-og-image-cropped.jpg");
 }
 
 /*Reservation Section*/
+.reserveText{
+    text-align: center;
+}
 .reserveGames{
     background-color: white;
     height: 400px;

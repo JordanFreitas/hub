@@ -74,5 +74,41 @@
 
 <!-- </div> -->
 <script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>
+<script>
+  $(document).ready(function() {
+    //feed to parse
+    var feed = "http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=exfsp9BbGwOa3zSOgl8KgBXBFMpkD%2f8wB4cyJyjsaky0zfodIX0a4vbFGmpnTFgw";
+    
+    $.ajax(feed, {
+        accepts:{
+            xml:"application/rss+xml"
+        },
+        dataType:"xml",
+        success:function(data) {
+            
 
+            $(data).find("item").each(function () { 
+                var feedInst = $(this);
+                  eventItem = {
+                    title:       feedInst.find("title").text(),
+                    link:        feedInst.find("link").text(),
+                    description: feedInst.find("description").text(),
+                  }
+                  var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
+                  var after = '';
+                  $('#rssSlider')
+                    .append(before)
+                    // .wrap('');
+               console.log(before);
+            });
+    
+
+        }   
+    });
+    
+});
+
+
+</script>
 <?php get_footer(); ?>
+<!-- <a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">APM Summer Staff Event</a></h3><p>Lorem ipsum.</p></div> -->
