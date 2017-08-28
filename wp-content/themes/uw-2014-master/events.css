@@ -1,0 +1,33 @@
+.eventTop{
+    background-image: url('http://aiawa.org/wp-content/uploads/2013/11/Z35-2013B_UW-Husky-Union-Building-Benjamin-Benschneider_print.jpg');
+    height: 80vh;
+}
+.eventTitle{
+    text-align: center;
+    font-size: 100px;
+    padding-top: 3%;
+}
+.eventTopInfo{
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 50px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    color: white;
+    height: 100%;
+    /* top: 10%; */
+    background-color: rgba(0,0,0,.5);
+}
+.eventTopInfo .eventOption:hover{
+    background-color: rgba(0,0,0.8);
+}
+.eventOptionSect{
+    width: 100%;
+    text-align: center;
+    
+}
+.eventOption{
+    display: inline;
+    padding: 5%;
+}
