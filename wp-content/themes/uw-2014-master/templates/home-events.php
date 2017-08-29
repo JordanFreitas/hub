@@ -80,7 +80,7 @@
     
     //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
-    var feed = "http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=exfsp9BbGwOa3zSOgl8KgBXBFMpkD%2f8wB4cyJyjsaky0zfodIX0a4vbFGmpnTFgw";
+    var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
     
     $.ajax(feed, {
         accepts:{
@@ -89,37 +89,23 @@
         dataType:"xml",
         success:function(data) {
             
-            var slde = '<div class="slide">';
-            var aslde = '<a class = "slideA" title="Slide title" href="#">';
-            var img = '<img title="Image title" src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/21015881_1850118501683348_2034974718194203291_o.jpg?oh=af11400bea19d178ac394b46dfa258d0&oe=5A2F9867" alt="Image title" />';
-            
+
             $(data).find("item").each(function () { 
                 var feedInst = $(this);
                   eventItem = {
                     title:       feedInst.find("title").text(),
                     link:        feedInst.find("link").text(),
-                    description: feedInst.find("description").text(),
+                    start: feedInst.find("mc:StartTime").text(),
                   }
-                  var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
+                //   var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
                   var after = eventItem.title;
                   var aft = eventItem.link;
 
 
                  
-                    $('#rssSlider')
-                    // .append(start)
-                    .append(before);
-                    // .wrap('<div>')
-                    // .append(aft);
+                   
 
-                    // .append(slde);
-
-                    $('.slide')
-                    .append(aslde);
-                    $('.slideA')
-                    .append(img);
-
-               console.log(before);
+               console.log(eventItem);
             });
             // $('#calEvent').mouseEnter(
             //     $('.eventTopInfo').css("background-color", "rgba(0,0,0,.8)")
