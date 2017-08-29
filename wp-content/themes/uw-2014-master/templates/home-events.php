@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
     <head>
+    
         <title> <?php wp_title(' | ',TRUE,'right'); bloginfo('name'); ?> </title>
         <meta charset="utf-8">
         <meta name="description" content="<?php bloginfo('description', 'display'); ?>">
@@ -82,6 +83,9 @@
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
     var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
     
+    // <li><span class="text-primary"><strong>^mc=>eventdate[opts:date=F j]$</strong></span><br /><span class="text-info"><strong><a href='^link$' target='_blank' title='^description$'>^title[opts:trim=48]$</a></strong></span><br /><dfn>^mc=>location$<br />^mc=>starttime$ - ^mc=>endtime$<hr class="alert-success"></dfn></li>
+    // var $xml = $(jQuery.parseXML('http://hubres.uw.edu/hubcal/RSSFeeds.aspx?Name=events'));
+    // console.log($xml);
     $.ajax(feed, {
         accepts:{
             xml:"application/rss+xml"
@@ -93,9 +97,14 @@
             $(data).find("item").each(function () { 
                 var feedInst = $(this);
                   eventItem = {
+                    // item:       feedInst.find("item").text(),
                     title:       feedInst.find("title").text(),
                     link:        feedInst.find("link").text(),
-                    start: feedInst.find("mc:StartTime").text(),
+
+                    start: feedInst.find("mc\\:location, location").text(),
+                    // content: $this.find("content\\:encoded, encoded").text()
+                  
+                //   start: feedInst.find('^mc=>location').text(),
                   }
                 //   var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
                   var after = eventItem.title;
@@ -104,8 +113,9 @@
 
                  
                    
-
+console.log(feedInst);
                console.log(eventItem);
+            //    console.log(eventItem.item);
             });
             // $('#calEvent').mouseEnter(
             //     $('.eventTopInfo').css("background-color", "rgba(0,0,0,.8)")

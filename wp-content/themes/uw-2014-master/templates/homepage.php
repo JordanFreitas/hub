@@ -61,7 +61,7 @@
           
         ?>
 <script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSjDgV_-XDhkm-WOaObh4m_O1sZs-Iz70&callback=initMap" ></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzUXEGcqNsxHDM_0O8784P5qDTPVGcAvU&callback=initMap" ></script>
 <script>
 
 $(window).scroll(function(){
