@@ -29,7 +29,12 @@
         ?>
     <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/events.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
-
+    <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
+<!-- // Add the new slick-theme.css if you want the default styling -->
+<!-- <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/> -->
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
@@ -82,10 +87,7 @@
     //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
     var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
-    
-    // <li><span class="text-primary"><strong>^mc=>eventdate[opts:date=F j]$</strong></span><br /><span class="text-info"><strong><a href='^link$' target='_blank' title='^description$'>^title[opts:trim=48]$</a></strong></span><br /><dfn>^mc=>location$<br />^mc=>starttime$ - ^mc=>endtime$<hr class="alert-success"></dfn></li>
-    // var $xml = $(jQuery.parseXML('http://hubres.uw.edu/hubcal/RSSFeeds.aspx?Name=events'));
-    // console.log($xml);
+
     $.ajax(feed, {
         accepts:{
             xml:"application/rss+xml"
@@ -98,37 +100,58 @@
                 var feedInst = $(this);
                   eventItem = {
                     // item:       feedInst.find("item").text(),
-                    title:       feedInst.find("title").text(),
-                    link:        feedInst.find("link").text(),
-
-                    start: feedInst.find("mc\\:location, location").text(),
-                    // content: $this.find("content\\:encoded, encoded").text()
-                  
-                //   start: feedInst.find('^mc=>location').text(),
+                    eTitle:       feedInst.find("title").text().slice(0,10),
+                    eLink:        feedInst.find("link").text(),
+                    eLoc: feedInst.find("mc\\:location, location").text(),
+                    eDate: feedInst.find("mc\\:EventDate, EventDate").text(),
+                    eStart: feedInst.find("mc\\:StartTime, StartTime").text(),
+                    eEnd: feedInst.find("mc\\:EndTime, EndTime").text(),                
                   }
-                //   var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
-                  var after = eventItem.title;
-                  var aft = eventItem.link;
+                //   eventItem.eTitle.slice
+                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle + '</div>';
+                  
+                  var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
+                                "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
+                  var dateParse = eventItem.eDate.split("/");
+                  var eMonth = months[dateParse[0]-1];
+                  var eDay = dateParse[1];
+                  var eYear = dateParse[2];
+                //   var eDateHTML = '<div class="eventDayBox col-md-4"> <div class="eventMonth">' + eMonth + '</div><div class="eventDay">' + eDay + '</div></div>';
+                //   console.log(eMonth, eDay, eYear);
+                //   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
+                //   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
+                //   var slideFull = '<div class="eventFull">' + eTitleHTML + eDateHTML + eLocHTML + eTimeHTML + '</div>';
+                    var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
+                  console.log(eMonth, eDay, eYear);
+                  var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
+                  var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
+                  var slideFull = '<div class="eventFull">' + eDateHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
+                    $("#eSlide").append(slideFull);
 
-
-                 
-                   
-console.log(feedInst);
-               console.log(eventItem);
-            //    console.log(eventItem.item);
             });
-            // $('#calEvent').mouseEnter(
-            //     $('.eventTopInfo').css("background-color", "rgba(0,0,0,.8)")
-            // );
-    
-            // $('#calEvent').mouseLeave(
-            //     $('.eventTopInfo').css("background-color", "rgba(0,0,0,.5)")
-            // );
 
+            
+            $('#eSlide').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
+            $('#eSlide').slick({
+                arrows: true,
+                infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 3
+          });
+     
         }   
     });
+
+    $('#eSlide').slick({
+        arrows: true,
+        infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+  });
     
 });
+
+
 
 
 </script>
