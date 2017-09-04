@@ -328,6 +328,9 @@ a.uw-btn:before{
         font-weight: 900;
         font-family: "Encode Sans Compressed", sans-serif;
     }
+    .eventSlide{
+        background-color: white;
+    }
     .eventSlideTitle{
         font-weight: 900;
         padding-left: 0px;
