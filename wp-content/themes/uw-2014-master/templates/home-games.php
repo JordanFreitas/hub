@@ -118,11 +118,13 @@
                 //   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
                 //   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
                 //   var slideFull = '<div class="eventFull">' + eTitleHTML + eDateHTML + eLocHTML + eTimeHTML + '</div>';
-                    var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
+                    var eDateHTML = '<div class="eventDayBox col-md-3"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
+                    // var imgHTML = '<img class = "imgEventSlide col-md-4" src="https://c.tadst.com/gfx/1200x630/calendar.png?1" alt="">';
+                    var iconHTML = '<a href="#" class="imgEventSlide col-md-3 ic-calendar"></a>';
                   console.log(eMonth, eDay, eYear);
                   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
                   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
-                  var slideFull = '<div class="eventFull">' + eDateHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
+                  var slideFull = '<div class="eventFull">' + eDateHTML + iconHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
                     $("#eSlide").append(slideFull);
 
             });

@@ -113,24 +113,42 @@
                   var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
                                 "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
                   var dateParse = eventItem.eDate.split("/");
+                  var eMonthVal = dateParse[0]-1;
                   var eMonth = months[dateParse[0]-1];
                   var eDay = dateParse[1];
                   var eYear = dateParse[2];
+                  var startTime24 =  eventItem.eStart.split(":");
+                  var startHour = parseInt(startTime24[0]);
+                  var startMin = startTime24[1].split(" ");
+                  startMin = startMin[0];
+                  if(eventItem.eStart.slice(-2) == "PM" && startTime24[0] < 12) startHour += 12;
+                  if(eventItem.eStart.slice(-2) == "AM" && startTime24[0] == 12) startHour -= 12;
+                  startTime24 = startHour + ':' + startMin + ':00';
+                  console.log(startTime24);
+                  
                 //   var eDateHTML = '<div class="eventDayBox col-md-4"> <div class="eventMonth">' + eMonth + '</div><div class="eventDay">' + eDay + '</div></div>';
                 //   console.log(eMonth, eDay, eYear);
                 //   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
                 //   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
                 //   var slideFull = '<div class="eventFull">' + eTitleHTML + eDateHTML + eLocHTML + eTimeHTML + '</div>';
                     var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
-                  console.log(eMonth, eDay, eYear);
+                  // console.log(eMonth, eDay, eYear);
+                  var iconHTML = '<a href="#" class="addtocalendar imgEventSlide col-md-3 ic-calendar"></a>';
+                  if(eDay.length == 1) eDay = '0' + eDay;
+                  if(eMonthVal.length == 1) eMonthVal = '0' + eMonthVal;
+                  console.log(eDay);
+                  var calendarContent = '<var class="atc_date_start">' + eYear + '-' + eMonthVal + '-' + eDay + ' ' + startTime24 + '</var><var class="atc_date_end">2014-05-04 18:00:00</var>';
+                  console.log(calendarContent);
                   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
                   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
-                  var slideFull = '<div class="eventFull">' + eDateHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
+                  var slideFull = '<div class="eventFull">' + eDateHTML + iconHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
                     $("#eSlide").append(slideFull);
 
             });
 
-            
+
+
+
             $('#eSlide').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
             $('#eSlide').slick({
                 arrows: true,

@@ -275,17 +275,6 @@ a.uw-btn:before{
     background-color: #613ba9;
     transform: rotate(180deg);
 }
-
-.eventDayBox{
-    width: 60px;
-    height: 60px;
-    border-right: 1px solid #aaa;
-    text-align: center;
-    display: inline-block;
-    margin: 15px;
-    color: #5e5f61;
-    background: #fff;
-}
 .findTitle{
     font-family: "Encode Sans Compressed", sans-serif;
     margin-top: 0px !important;
@@ -317,11 +306,23 @@ a.uw-btn:before{
     .findTitle > span:after{
         left: 100%;
     }
+
+    /* EVENT TOOLBAR  */
+.eventDayBox{
+    width: 60px;
+    height: 60px;
+    border-right: 1px solid #aaa;
+    text-align: center;
+    display: inline-block;
+    margin: 15px;
+    color: #5e5f61;
+    background: #fff;
+}
+
     .eventDay{
         margin-bottom: -13px;
         margin-top: -10px;
         font-size: 35px;
-        /* font-weight: 900; */
     }
     .eventMonth{
         color: #613ba9;
@@ -330,6 +331,8 @@ a.uw-btn:before{
     }
     .eventSlide{
         background-color: white;
+        position: relative;
+        padding-bottom: 3%;
     }
     .eventSlideTitle{
         font-weight: 900;
@@ -348,6 +351,34 @@ a.uw-btn:before{
         -webkit-transition:0.5s;
     }
     .eventFull:hover {
+        /* background: #4b2e83;
+        color: white;
+        border: 2px solid #4b2e83; */
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);
+
         /* color: #FFF; */
       }
+      .eventFull:hover .imgEventSlide{
+        opacity: 1;
+        height: auto;
+        
+      }
+      .eventFull:hover .eventDayBox{
+        display: none;
+      }
+/* NEED TO CHANGE IN SLICK.CSS --- COMMENT OUT IMG DISPLAY */
+      .imgEventSlide{
+          padding-left: 10px;
+          transition: opacity .5s ease-out;
+          opacity: 0; 
+          height: 0;
+          overflow: hidden;
+          
+          
+      }
+      [class^="ic-"]:before, [class*=" ic-"]:before{
+          /* color: white; */
+          font-size: 80px;
+          
+      }
+      /* END EVENT TOOLBAR */

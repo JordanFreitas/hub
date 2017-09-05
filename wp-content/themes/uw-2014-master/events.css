@@ -101,16 +101,6 @@ margin: 2%;}
     transform: rotate(180deg);
 }
 
-.eventDayBox{
-    width: 60px;
-    height: 60px;
-    border-right: 1px solid #aaa;
-    text-align: center;
-    display: inline-block;
-    margin: 15px;
-    color: #5e5f61;
-    background: #fff;
-}
 .findTitle{
     font-family: "Encode Sans Compressed", sans-serif;
     margin-top: 0px !important;
@@ -121,8 +111,6 @@ margin: 2%;}
     padding-top: 5%;
         z-index: 2;
         width: 100%;
-        /* background: rgba(0,0,0,.3); */
-        /* color: white !important; */
     }
     .findTitle > span{
         position: relative;
@@ -142,62 +130,79 @@ margin: 2%;}
     .findTitle > span:after{
         left: 100%;
     }
-    .eventDay{
-        margin-bottom: -13px;
-        margin-top: -10px;
-        font-size: 35px;
-        /* font-weight: 900; */
+
+    /* EVENT TOOLBAR  */
+    .eventDayBox{
+        width: 60px;
+        height: 60px;
+        border-right: 1px solid #aaa;
+        text-align: center;
+        display: inline-block;
+        margin: 15px;
+        color: #5e5f61;
+        background: #fff;
     }
-    .eventMonth{
-        color: #613ba9;
-        font-weight: 900;
-        font-family: "Encode Sans Compressed", sans-serif;
-    }
-    .eventSlideTitle{
-        font-weight: 900;
-        padding-left: 0px;
-    }
-    .eventLoc{
-        padding-left: 0px;
-        
-    }
-    .eventTime{
-        padding-left: 0px;
-        
-    }
-    .eventFull{
-        border: 2px solid #FFF;
-        -webkit-transition:0.5s;
-    }
-    .eventFull:hover {
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);
-        /* color: #FFF; */
-      }
-/* .eventFull::before, .eventFull::after {
-    width: 100%;
-    height:100%;
-    z-index: 3;
-    content:'';
-    position: absolute;
-    top:0;
-    left:0;
-    box-sizing: border-box;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    transition: 0.5s;
-  }
-  
-  .eventFull::before {
-    border-bottom: 3px solid #000;
-    border-left: 3px solid #000;
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-  }
-  
-  .eventFull::after {
-    border-top: 3px solid #000;
-    border-right: 3px solid #000;
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 0 100%;
     
-  } */
+        .eventDay{
+            margin-bottom: -13px;
+            margin-top: -10px;
+            font-size: 35px;
+        }
+        .eventMonth{
+            color: #613ba9;
+            font-weight: 900;
+            font-family: "Encode Sans Compressed", sans-serif;
+        }
+        .eventSlide{
+            background-color: white;
+            position: relative;
+            padding-bottom: 3%;
+        }
+        .eventSlideTitle{
+            font-weight: 900;
+            padding-left: 0px;
+        }
+        .eventLoc{
+            padding-left: 0px;
+            
+        }
+        .eventTime{
+            padding-left: 0px;
+            
+        }
+        .eventFull{
+            border: 2px solid #FFF;
+            -webkit-transition:0.5s;
+        }
+        .eventFull:hover {
+            /* background: #4b2e83;
+            color: white;
+            border: 2px solid #4b2e83; */
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);
+    
+            /* color: #FFF; */
+          }
+          .eventFull:hover .imgEventSlide{
+            opacity: 1;
+            height: auto;
+            
+          }
+          .eventFull:hover .eventDayBox{
+            display: none;
+          }
+    /* NEED TO CHANGE IN SLICK.CSS --- COMMENT OUT IMG DISPLAY */
+          .imgEventSlide{
+              padding-left: 10px;
+              transition: opacity .5s ease-out;
+              opacity: 0; 
+              height: 0;
+              overflow: hidden;
+              
+              
+          }
+          [class^="ic-"]:before, [class*=" ic-"]:before{
+              /* color: white; */
+              font-size: 80px;
+              
+          }
+          /* END EVENT TOOLBAR */
