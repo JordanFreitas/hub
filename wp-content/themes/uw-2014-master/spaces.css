@@ -1,0 +1,147 @@
+.spacesTabs{
+    height:auto;
+}
+.tabCont{
+    height: 500px;
+    background-color: white;
+    text-align: center;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+.spaceTile{
+    height: 500px;
+    padding: 0px !important;
+    margin: 1%;
+    width: 48%;
+}  
+.lyceum{
+    background-image:     url("https://d1bzei02dh3yoz.cloudfront.net/images/spaces/95/hub-lyceum_5__large.jpg");
+  }
+.ballroom{
+    background-image: url("https://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_211-7-1024x678.jpg");
+}
+.H307{
+background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_307_3.jpg");
+}
+.H238{
+background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_238-5.jpg");
+
+}
+.H106{
+    background-image: url("https://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub-106_1.jpg");
+}
+.H214{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_214-5.jpg");
+    
+}
+.H337{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_337-4.jpg");
+    
+}
+.H340{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_340_2.jpg");
+    
+}
+.H145{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg");
+    
+}
+.H250{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_250_3.jpg");
+    
+}
+.H332{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_332-4.jpg");
+    
+}
+.H334{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_334-2.jpg");
+    
+}
+.lawn{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_lawn_2.jpg");
+    
+}
+.greenRoom{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/GreenRoom_3-1024x685.jpg");
+    
+}
+.lit{
+    background-image: url("");
+    
+}
+.preFunc{
+    background-image: url("https://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/hub_203-3.jpg");
+    
+}
+.foodStage{
+    background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/10/FooSA_18-1024x685.jpg");
+}
+
+.titleCover{
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.gameBlockCover{
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    /* background-color: rgba(0, 0, 0, 0.35); */
+    
+}
+.gameBlockBtn{
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s linear;
+}
+.gameBlockLabel{
+    color: whitesmoke;
+    font-family: "Encode Sans Compressed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 85px;
+    /* margin-top: 12%; */
+}
+.gameBlockCover:hover{
+    background-color: rgba(0, 0, 0, 0.85);
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    
+}
+.gameBlockCover:hover .gameBlockBtn{
+
+    visibility: visible;
+    opacity: 1;
+}
+/* .bowl:hover{
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.45), 
+        rgba(255, 255, 255, 0.45)
+    )
+} */.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    font-family: "Encode Sans Compressed",sans-serif;
+    /* font-weight: 800 !important; */
+    font-size: 16px !important;
+    background-color: #e8e3d3 !important;
+    /* background: none !important; */
+    color: #5a5a5a !important;
+    border:  none !important;
+    
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+    font-family: "Encode Sans Compressed",sans-serif;
+    /* font-weight: 800 !important; */
+    font-size: 16px !important;
+    background-color: #e8e3d3 !important;
+    background: none !important;
+    color: #5a5a5a !important;
+}

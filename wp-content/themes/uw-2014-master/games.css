@@ -196,8 +196,11 @@ a.uw-btn:before{
     text-align: center;
 }
 .reserveGames{
-    background-color: white;
-    height: 400px;
+    background-color:#ECE9E2;
+    height: 600px;
+}
+div.uw-slideshow > div.slide{
+    background-color: #ECE9E2 !important;
 }
 .gameType{
     position: relative;
