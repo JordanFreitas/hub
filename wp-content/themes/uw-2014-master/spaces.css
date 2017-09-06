@@ -9,8 +9,11 @@
     overflow: hidden;
     margin-bottom: 3%;
 }
+.box4{
+height: 800px;
+}
 .spaceTile{
-    height: 500px;
+    height: 400px;
     padding: 0px !important;
     margin: 1%;
     width: 48%;
@@ -80,7 +83,7 @@ background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/u
 }
 
 .titleCover{
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.55);
 }
 .gameBlockCover{
     position: absolute;
@@ -107,7 +110,7 @@ background-image: url("http://depts.washington.edu/thehub/wordpress/wp-content/u
     font-family: "Encode Sans Compressed", sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 85px;
+    font-size: 75px;
     /* margin-top: 12%; */
 }
 .gameBlockCover:hover{
