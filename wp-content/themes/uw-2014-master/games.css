@@ -37,13 +37,14 @@ text-align: center !important;
     color: #4b2e83 !important;
 }
 .gamesVidReserve{
+    /* background-color: #e8e3d3 !important; */
+    
     display: inline !important;
 }
 a.uw-btn:before{
     background-color: #4B2E83 !important;
 }
 .uw-btn{
-    background-color: #e8e3d3 !important;
     color: #5a5a5a !important;
 }
 .uw-btn:hover{
@@ -198,6 +199,11 @@ a.uw-btn:before{
 .reserveGames{
     background-color:#ECE9E2;
     height: 600px;
+}
+.reserveBtnSect{
+    margin-left: 3%;
+    font-size: 20px !important;
+    background-color: #fff !important;
 }
 div.uw-slideshow > div.slide{
     background-color: #ECE9E2 !important;

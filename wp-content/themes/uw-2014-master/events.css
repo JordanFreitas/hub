@@ -232,3 +232,6 @@ margin: 2%;}
               display: none !important;
           }
           /* END EVENT TOOLBAR */
+          .discover .box-outer .box .tile:hover{
+              background-color: white;
+          }
