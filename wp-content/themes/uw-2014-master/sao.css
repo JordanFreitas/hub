@@ -1,0 +1,40 @@
+.find{
+    background-image: url('https://photos.smugmug.com/Classroom/i-QLP8f2w/0/0d6fd223/X3/21070418_200%20Tap%20Dance_0466-X3.jpg');
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+    height: 80vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 45%);
+    /* height: 50%; */
+    /* transform: skewx(-30deg); */
+    width: 100%;
+}
+.start{
+    background-image: url('https://www.usfa.fema.gov/img/share/college_students.1200x627.jpg');
+    background-size: cover;
+    position: absolute;
+    height: 80vh;
+    clip-path: polygon(0% 52%, 100% 90%, 100% 10%, 0% 48%);
+            /* z-index: 2; */
+    width: 100%;
+}
+.manage{
+    background-image: url('https://photos.smugmug.com/Classroom/i-dPvjdkX/0/a49c40ea/X3/2017_05_25_Spring%20in%20the%20Cascades%20Field%20Trip_0101-X3.jpg');
+    height: 80vh;
+    background-size: cover;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 0% 55%);    
+    position: absolute;
+    /* z-index: 3; */
+    width: 100%;
+}
+.find:hover{
+    clip-path: none;
+    z-index: 5;
+}
+.exploreTop{
+    height: 80vh;
+    background-color: white;
+}
+
+
+

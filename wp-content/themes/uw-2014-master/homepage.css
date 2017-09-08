@@ -10865,6 +10865,17 @@ margin-top: -1%;
 
     position: relative;
 }
+.clubIcon{
+  z-index: 1;
+  height: 400px;
+}
+.findClub{
+  z-index: 1;
+  height: 400px;
+}
+.iconFont [class^="ic-social"]:before, [class*=" ic-social"]:before{
+  font-size: 400px !important;
+}
 .findTitle{
 margin-top: 0px !important;
     text-align: center;
@@ -10911,7 +10922,7 @@ padding-top: 5%;
       position: relative;
       display: inline-block;
   }
-  .getInvolvedTitle > span:before, .findTitle > span:after{
+  .getInvolvedTitle > span:before, .getInvolvedTitle > span:after{
       content: '';
       position: absolute;
       top: 50%;
@@ -10925,8 +10936,14 @@ padding-top: 5%;
   .getInvolvedTitle > span:after{
       left: 100%;
   }
-div.uw-slideshow{
-}
+  .subInvolved{
+    -webkit-transition:.5s;
+    transition: .5s;
+    visibility: hidden;
+  }
+  .involvedTab:hover .subInvolved{
+    visibility: visible;
+  }
 .uw-body-home{
 padding-top: 0px !important;
     width: 80%;
