@@ -10,6 +10,7 @@
     /* height: 50%; */
     /* transform: skewx(-30deg); */
     width: 100%;
+    cursor: pointer;
     
 }
 .discoverC{
@@ -26,6 +27,8 @@
     overflow: hidden;
     transform: 1s ease;
     
+    cursor: pointer;
+    
     
 }
 .make{
@@ -40,6 +43,7 @@
     width: 100%;
     overflow: hidden;
     transform: 1s ease;
+    cursor: pointer;
     
 }
 /* .find:hover{
@@ -51,12 +55,7 @@
     z-index: 5;
     transform: 1s ease;
 } */
-.manage:hover{
-    /* background-image: url('https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg'); */
-    clip-path: none;
-    z-index: 5;
-    transform: 1s ease;
-}
+
 .saoTop{
     height: 75vh;
     min-height: 400px;
@@ -139,6 +138,8 @@
     border-left: 2px solid rgba(255,255,255,0.5);
     padding: 0px;
     text-align: center;
+    cursor: pointer;
+    
 }
 .findExpTitle{
     color: white;
@@ -152,6 +153,8 @@
     border-left: 2px solid rgba(255,255,255,0.5);
     padding: 0px;
     text-align: center;
+    cursor: pointer;
+    
 }
 .startExpTitle{
     color: white;
@@ -165,6 +168,8 @@
     border-left: 2px solid rgba(255,255,255,0.5);
     padding: 0px;
     text-align: center;
+    cursor: pointer;
+    
 }
 .manageExpTitle{
     color: white;
@@ -177,6 +182,8 @@
 }
 .findExp:hover .findBtn,.findExp:hover .findDirectBtn, .startExp:hover .startBenBtn{
     display: inline-block !important;
+    cursor: pointer;
+    
 }
 
 
