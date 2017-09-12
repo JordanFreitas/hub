@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: home-events
+ * Template Name: sao
  */
 ?>
 
@@ -27,7 +27,7 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/events.css?ver=3.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/sao.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
@@ -109,7 +109,7 @@
                     eEnd: feedInst.find("mc\\:EndTime, EndTime").text(),                
                   }
                 //   eventItem.eTitle.slice
-                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,25) + '</div>';
+                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,10) + '</div>';
                   
                   var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
                                 "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
@@ -182,8 +182,54 @@
   slidesToShow: 3,
   slidesToScroll: 3
   });
-    
+
+  $('.explore').click(function(){
+      
+    $(".discoverC").fadeOut(500);
+    $(".make").fadeOut(500);
+    $(".explore").fadeOut(500);
+    $('.saoTop').css({
+        background: "url(https://photos.smugmug.com/Student-Life/i-3QNKrVb/0/015bdb2f/X3/10695848126_ce2b78ab97_o-X3.jpg)",
+        backgroundPositionY: "-300px",
+        backgroundSize: "cover"}).fadeIn(750);
+    $(".exploreTop").fadeIn(1000);
+
 });
+
+$('.make').click(function(){
+      
+    $(".discoverC").fadeOut(500);
+    $(".make").fadeOut(500);
+    $(".explore").fadeOut(500);
+    $('.saoTop').css({
+        background: "url('https://photos.smugmug.com/Husky-Spirit/i-qfFNDs2/0/afcdf961/X3/_MG_1122-X3.jpg')",
+        backgroundSize: "cover"}).fadeIn(750);
+    $(".exploreTop").fadeIn(500);
+
+    // $('.exploreSub').animate({
+    //     opacity: .25,
+    //     fontSize: '10em',
+    //    }, '4000');
+});
+  });
+
+//   $(function () {
+//     $('.item img').each(function () {
+//         $(this).data('original', this.src);
+//     }).mouseenter(function () {
+//         $(this).fadeOut(500, function(){
+//             $(this).attr('src', $(this).data('hover'));
+//             $(this).fadeIn(500);
+//         });
+//     }).mouseleave(function () {
+//         $(this).fadeOut(500, function(){
+//             $(this).attr('src', $(this).data('original'));
+//             $(this).fadeIn(500);
+//         });
+//     });
+// });
+    
+
 
 
 

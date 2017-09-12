@@ -1,40 +1,196 @@
-.find{
-    background-image: url('https://photos.smugmug.com/Classroom/i-QLP8f2w/0/0d6fd223/X3/21070418_200%20Tap%20Dance_0466-X3.jpg');
+.explore{
+    background-image: url('https://photos.smugmug.com/Student-Life/i-3QNKrVb/0/015bdb2f/X3/10695848126_ce2b78ab97_o-X3.jpg');
     background-size: cover;
+    background-position-y: -300px;
     position: absolute;
     overflow: hidden;
-    height: 80vh;
+    height: 75vh;
+    min-height: 400px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 45%);
     /* height: 50%; */
     /* transform: skewx(-30deg); */
     width: 100%;
+    
 }
-.start{
-    background-image: url('https://www.usfa.fema.gov/img/share/college_students.1200x627.jpg');
+.discoverC{
+    background-image: url('https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg');
     background-size: cover;
+    background-position: 100px, 0px;
     position: absolute;
-    height: 80vh;
+    height: 75vh;
+    min-height: 400px;
+    
     clip-path: polygon(0% 52%, 100% 90%, 100% 10%, 0% 48%);
             /* z-index: 2; */
     width: 100%;
+    overflow: hidden;
+    transform: 1s ease;
+    
+    
 }
-.manage{
-    background-image: url('https://photos.smugmug.com/Classroom/i-dPvjdkX/0/a49c40ea/X3/2017_05_25_Spring%20in%20the%20Cascades%20Field%20Trip_0101-X3.jpg');
-    height: 80vh;
+.make{
+    background-image: url('https://photos.smugmug.com/Husky-Spirit/i-qfFNDs2/0/afcdf961/X3/_MG_1122-X3.jpg');
+    height: 75vh;
+    min-height: 400px;
+    
     background-size: cover;
     clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 0% 55%);    
     position: absolute;
     /* z-index: 3; */
     width: 100%;
+    overflow: hidden;
+    transform: 1s ease;
+    
 }
-.find:hover{
+/* .find:hover{
     clip-path: none;
     z-index: 5;
+} */
+/* .start:hover{
+    clip-path: none;
+    z-index: 5;
+    transform: 1s ease;
+} */
+.manage:hover{
+    /* background-image: url('https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg'); */
+    clip-path: none;
+    z-index: 5;
+    transform: 1s ease;
+}
+.saoTop{
+    height: 75vh;
+    min-height: 400px;
+    
+    background-color: white;}
+.exploreSub{
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+    padding-left: 4%;
+}
+.discoverSub{
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+    padding-left: 47%;
+    padding-top: 13%;
+}
+.makeSub{
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+    padding-left: 4%;
+    
+    padding-top: 26%;
+}
+
+.topCover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    
+}
+.topCover:hover{
+    background-color: rgba(0, 0, 0, 0.55);
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    
+}      
+.topCover:hover .exploreSub, .topCover:hover .makeSub, .topCover:hover .discoverSub{
+    text-shadow: 1px 0px 50px white;
+        -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    
+}  
+.saoTopCov{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    height: 75vh;
+    min-height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 .exploreTop{
-    height: 80vh;
-    background-color: white;
+    position: absolute;
+    height: 75vh;
+    min-height: 400px;
+    display: none;
+    width: 100%;
+}
+.findExp{
+    height: 100%;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    border-left: 2px solid rgba(255,255,255,0.5);
+    padding: 0px;
+    text-align: center;
+}
+.findExpTitle{
+    color: white;
+    text-align: center;
+    margin-top: 35%;
+    font-size: 5em;
+}
+.startExp{
+    height: 100%;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    border-left: 2px solid rgba(255,255,255,0.5);
+    padding: 0px;
+    text-align: center;
+}
+.startExpTitle{
+    color: white;
+    text-align: center;
+    margin-top: 35%;
+    font-size: 5em;
+}
+.manageExp{
+    height: 100%;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    border-left: 2px solid rgba(255,255,255,0.5);
+    padding: 0px;
+    text-align: center;
+}
+.manageExpTitle{
+    color: white;
+    text-align: center;
+    margin-top: 35%;
+    font-size: 5em;
+}
+.findBtn, .findDirectBtn, .startBenBtn{
+    display: none !important;
+}
+.findExp:hover .findBtn,.findExp:hover .findDirectBtn, .startExp:hover .startBenBtn{
+    display: inline-block !important;
 }
 
 
-
+/* @keyframes titleAnimation
+{
+    from {
+        padding-left: 4%;
+        
+    }
+    to {
+        padding-left: 20%;
+        
+    }
+}
+.explore:hover{
+animation:titleAnimation 3s;
+} */
