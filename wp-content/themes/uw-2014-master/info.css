@@ -1,0 +1,120 @@
+.infoTop{
+    background-image: url('https://group.skanska.com/49ee27/globalassets/externalcontent2/project/university-of-washington-husky-union-building-renovation-and-expansion-united-states/97b8065f-46fa-4eec-8094-ce0d679c16cd.1.jpg?height=400&width=825&scale=both&mode=crop&bgcolor=f3f3f3');
+    height: 80vh;
+    background-size: cover;
+    
+}
+
+.infoTitle{
+    text-align: center;
+    width: 50%;
+    background: rgba(0,0,0,.4);
+    font-weight: 400;
+    font-size: 70px;
+    margin-top: 4%;
+    margin-left: 0;
+    padding: 1%;
+}
+.infoTopInfo{
+    margin: 0 auto;
+    overflow: hidden;
+    /* padding-left: 50px; */
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    color: white;
+    height: 100%;
+    /* top: 10%; */
+    background-color: rgba(0,0,0,.45);
+}
+
+
+.infoOptionSect{
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;    
+}
+
+.infoIntro{
+     color: white;
+    position: absolute;
+    font-size: 8em;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.1);
+    font-weight: 500; 
+
+    /* color: #4b2e83;
+    position: absolute;
+    font-size: 8em;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,.5); */
+
+}
+/* top slider */
+.infoOpt{
+    font-size: 4em;
+    background: rgba(0,0,0,.1);
+    font-weight: 600;
+    color: white;
+}
+.infoSlide{
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+}
+.slick-dots li button:before{
+    color: white !important;
+    opacity: .5 !important;
+    font-size: 10px !important;
+}
+.slick-dots li.slick-active button:before{
+    color: white !important;
+    opacity: 1 !important;
+}
+/* end top slider */
+
+
+.infoContact{
+    background-color: white;
+    position: relative;
+}
+.findTitle{
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+        text-align: center;
+        font-size: 4em;
+         overflow: hidden;
+        padding-bottom: 3%;
+    padding-top: 3%;
+        z-index: 2;
+        width: 100%;
+        color: #4b2e83;
+        /* background: rgba(0,0,0,.3); */
+        /* color: white !important; */
+    }
+    .findTitle > span{
+        position: relative;
+        display: inline-block;
+    }
+    .findTitle > span:before, .findTitle > span:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 2px solid;
+            width: 50%;
+        margin: 0 40px;
+    }
+    .findTitle > span:before{
+        right: 100%;
+    }
+    .findTitle > span:after{
+        left: 100%;
+    }
+    .contactinfoText{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #555555;
+    }
+

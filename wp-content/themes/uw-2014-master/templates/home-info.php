@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: sao
+ * Template Name: home-info
  */
 ?>
 
@@ -27,7 +27,7 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/sao.css?ver=3.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/info.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 <script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
 <!-- // Add the new slick-theme.css if you want the default styling -->
-<!-- <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/> -->
+<link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/>
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
@@ -109,7 +109,7 @@
                     eEnd: feedInst.find("mc\\:EndTime, EndTime").text(),                
                   }
                 //   eventItem.eTitle.slice
-                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,10) + '</div>';
+                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,25) + '</div>';
                   
                   var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
                                 "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
@@ -126,7 +126,7 @@
                   if(eventItem.eStart.slice(-2) == "PM" && startTime24[0] < 12) startHour += 12;
                   if(eventItem.eStart.slice(-2) == "AM" && startTime24[0] == 12) startHour -= 12;
                   startTime24 = startHour + ':' + startMin + ':00';
-                  console.log(startTime24);
+                //   console.log(startTime24);
                   //End Time Format
                   var endTime24 =  eventItem.eEnd.split(":");
                   var endHour = parseInt(endTime24[0]);
@@ -135,13 +135,13 @@
                   if(eventItem.eEnd.slice(-2) == "PM" && endTime24[0] < 12) endHour += 12;
                   if(eventItem.eEnd.slice(-2) == "AM" && endTime24[0] == 12) endHour -= 12;
                   endTime24 = endHour + ':' + endMin + ':00';
-                  console.log(endTime24);
+                //   console.log(endTime24);
 
                   var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
                   var iconHTML = '<a  target="_blank" href="http://addtocalendar.com/atc/google?utz=-420&uln=en-US&vjs=1.5&e[0][date_start]=2017-8-05%2010%3A00%3A00&e[0][date_end]=2017-8-05%2017%3A15%3A00&e[0][timezone]=America%2FLos_Angeles&e[0][title]=Recruitment%20Counselor%20Training&e[0][location]=HUB%20332&e[0][organizer_email]=thehub%40uw.edu" class="imgEventSlide col-md-3 ic-calendar"></a>';
                   if(eDay.length == 1) eDay = '0' + eDay;
                   if(eMonthVal.length == 1) eMonthVal = '0' + eMonthVal;
-                  console.log(eDay);
+                //   console.log(eDay);
                   var timeContent = '<var class="atc_date_start">' + eYear + '-' + eMonthVal + '-' + eDay + ' ' + startTime24 + '</var><var class="atc_date_end">' +  + eYear + '-' + eMonthVal + '-' + eDay + ' ' + endTime24 + '</var>';
                   var timeZone = '<var class="atc_timezone">America/Los_Angeles</var>';
                   var titleContent =  '<var class="atc_title">' + eventItem.eTitle + '</var>';
@@ -176,71 +176,68 @@
         }   
     });
 
-    $('#eSlide').slick({
-        arrows: true,
+    $('.infoSlide').slick({
+        arrows: false,
         infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
+        dots: true,
+        // focusOnSelect:true,
+        // speed: 500,
+  fade: true,
+  pauseOnHover: false,
+  pauseOnFocus:false,
+  autoplaySpeed: 1800,
+        autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
   });
 
-  $('.explore').click(function(){
-      
-    $(".discoverC").fadeOut(500);
-    $(".make").fadeOut(500);
-    $(".explore").fadeOut(500);
-    $('.saoTop').css({
-        background: "url(https://photos.smugmug.com/Student-Life/i-3QNKrVb/0/015bdb2f/X3/10695848126_ce2b78ab97_o-X3.jpg)",
-        backgroundPositionY: "-300px",
-        backgroundSize: "cover"}).fadeIn(750);
-    $(".exploreTop").fadeIn(1000);
+setTimeout(function() {
+  $('#typeIntro').fadeOut(300);
+  setTimeout(function() {
+    $('.infoSlide').css('visibility','visible').hide().fadeIn("slow")
+        }, 0);
+}, 5000);
+
 
 });
-$('.discoverC').click(function(){
-      
-    $(".discoverC").fadeOut(500);
-    $(".make").fadeOut(500);
-    $(".explore").fadeOut(500);
-    $('.saoTop').css({
-        background: "url(https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg)",
-        backgroundPositionY: "-300px",
-        backgroundSize: "cover"}).fadeIn(750);
-    // $(".exploreTop").fadeIn(1000);
 
-});
-$('.make').click(function(){
-      
-    $(".discoverC").fadeOut(500);
-    $(".make").fadeOut(500);
-    $(".explore").fadeOut(500);
-    $('.saoTop').css({
-        background: "url('https://photos.smugmug.com/Husky-Spirit/i-qfFNDs2/0/afcdf961/X3/_MG_1122-X3.jpg')",
-        backgroundSize: "cover"}).fadeIn(750);
-    // $(".exploreTop").fadeIn(500);
+    // set up text to print, each item in array is new line
+    var aText = new Array(
+"How can we help?   "
+);
+var iSpeed = 150; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter(){
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typeIntro");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
 
-    // $('.exploreSub').animate({
-    //     opacity: .25,
-    //     fontSize: '10em',
-    //    }, '4000');
-});
-  });
+}
 
-//   $(function () {
-//     $('.item img').each(function () {
-//         $(this).data('original', this.src);
-//     }).mouseenter(function () {
-//         $(this).fadeOut(500, function(){
-//             $(this).attr('src', $(this).data('hover'));
-//             $(this).fadeIn(500);
-//         });
-//     }).mouseleave(function () {
-//         $(this).fadeOut(500, function(){
-//             $(this).attr('src', $(this).data('original'));
-//             $(this).fadeIn(500);
-//         });
-//     });
-// });
-    
 
+typewriter();
 
 
 
