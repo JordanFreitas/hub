@@ -196,7 +196,7 @@ setTimeout(function() {
   setTimeout(function() {
     $('.infoSlide').css('visibility','visible').hide().fadeIn("slow")
         }, 0);
-}, 5000);
+}, 8000);
 
 
 });
@@ -235,9 +235,8 @@ function typewriter(){
  }
 
 }
+setTimeout(function() {typewriter(); }, 3000);
 
-
-typewriter();
 
 
 

@@ -41,7 +41,7 @@
     font-size: 8em;
     width: 100%;
     text-align: center;
-    background: rgba(0,0,0,.1);
+    /* background: rgba(0,0,0,.1); */
     font-weight: 500; 
 
     /* color: #4b2e83;
@@ -118,3 +118,26 @@
         color: #555555;
     }
 
+    .ticketCont{
+        min-height: 500px;
+    }
+    .lostF{
+        min-height: 500px;
+        
+    }
+    .map{
+        min-height: 500px;
+        
+    }
+    .advert{
+        min-height: 500px;
+        
+    }
+    .cashier{
+        min-height: 500px;
+        
+    }
+    .tech{
+        min-height: 500px;
+        
+    }
