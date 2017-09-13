@@ -230,7 +230,7 @@
     color: #4b2e83;
     margin: -5px;
     font-weight: 600;
-    padding-top: 80%;    position: relative;
+    margin-top: 90px;   position: relative;
 }
 
 /* flip */
@@ -287,4 +287,12 @@
 }
 .asuwToggle:focus{
     outline: 0;
+}
+.backContent{
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+.backContentBtn{
+    background: #e8e3d3;
 }
