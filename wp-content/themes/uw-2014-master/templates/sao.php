@@ -202,7 +202,7 @@ $('.discoverC').click(function(){
     $(".explore").fadeOut(500);
     $('.saoTop').css({
         background: "url(https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg)",
-        backgroundPositionY: "-300px",
+        backgroundPosition: "100px, 0px",
         backgroundSize: "cover"}).fadeIn(750);
     // $(".exploreTop").fadeIn(1000);
 
@@ -215,7 +215,8 @@ $('.make').click(function(){
     $('.saoTop').css({
         background: "url('https://photos.smugmug.com/Husky-Spirit/i-qfFNDs2/0/afcdf961/X3/_MG_1122-X3.jpg')",
         backgroundSize: "cover"}).fadeIn(750);
-    // $(".exploreTop").fadeIn(500);
+    $('.saoTopCov').css("background","rgba(255,255,255,.6)")
+    $(".asuwTop").fadeIn(500);
 
     // $('.exploreSub').animate({
     //     opacity: .25,
