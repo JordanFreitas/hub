@@ -16,7 +16,7 @@
 .discoverC{
     background-image: url('https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg');
     background-size: cover;
-    background-position: 100px, 0px;
+    background-position: 0px, 100px;
     position: absolute;
     height: 75vh;
     min-height: 400px;
@@ -64,23 +64,23 @@
 .exploreSub{
     color: white;
     font-weight: 900;
-    font-size: 4em;
+    font-size: 6em;
     padding-left: 4%;
 }
 .discoverSub{
     color: white;
     font-weight: 900;
-    font-size: 4em;
-    padding-left: 47%;
+    font-size: 6em;
+    padding-left: 65%;
     padding-top: 13%;
 }
 .makeSub{
     color: white;
     font-weight: 900;
-    font-size: 4em;
+    font-size: 6em;
     padding-left: 4%;
     
-    padding-top: 26%;
+    padding-top: 24%;
 }
 
 .topCover{
@@ -186,10 +186,10 @@
     
 }
 
-
 /* ASUW */
 .asuwTop{
     display: none;
+    height: inherit;
 }
 .asuwTopCover{
     position: absolute;
@@ -210,6 +210,9 @@
     /* color: white; */
     font-weight: 100;
     font-size: 20px;
+}
+.logos{
+    height: inherit;
 }
 .logoRow{
     max-height: 15vh;
@@ -296,3 +299,74 @@
 .backContentBtn{
     background: #e8e3d3;
 }
+
+/* gpss    */
+.gpssTop{
+    display: none;
+}
+.gpssTopCover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    height: 100%;
+    width: 100%;
+}
+.gpssTitle{
+    margin-bottom: 0px;
+    font-size: 8em;
+    color: white;
+
+}
+.gpssText{
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+}
+/* contact */
+
+
+.saoContact{
+    background-color: white;
+    position: relative;
+}
+.findTitle{
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+        text-align: center;
+        font-size: 4em;
+         overflow: hidden;
+        padding-bottom: 3%;
+    padding-top: 3%;
+        z-index: 2;
+        width: 100%;
+        color: #4b2e83;
+        /* background: rgba(0,0,0,.3); */
+        /* color: white !important; */
+    }
+    .findTitle > span{
+        position: relative;
+        display: inline-block;
+    }
+    .findTitle > span:before, .findTitle > span:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 2px solid;
+            width: 50%;
+        margin: 0 40px;
+    }
+    .findTitle > span:before{
+        right: 100%;
+    }
+    .findTitle > span:after{
+        left: 100%;
+    }
+    .contactSaoText{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #555555;
+    }
+
+    .saoSlider{
+        width: 100%;
+    }

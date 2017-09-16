@@ -202,9 +202,22 @@ $('.discoverC').click(function(){
     $(".explore").fadeOut(500);
     $('.saoTop').css({
         background: "url(https://photos.smugmug.com/Campus-Architecture/Quad/i-9FwzmBF/0/2eae5bc0/X3/170104_January%20Campus_Buildings_00015-X3.jpg)",
-        backgroundPosition: "100px, 0px",
-        backgroundSize: "cover"}).fadeIn(750);
-    // $(".exploreTop").fadeIn(1000);
+        backgroundPosition: "0px, 100px",
+        backgroundSize: "cover"}).fadeIn(50);
+    // $('.saoTopCov').css("background","rgba(0,0,0,.4)")
+    $(".gpssTop").fadeIn(1000);
+
+});
+$('.gpssBack').click(function(){
+      
+    $(".discoverC").fadeIn(500);
+    $(".make").fadeIn(500);
+    $(".explore").fadeIn(500);
+    $('.saoTop').css({
+        background: "rgb(255,255,255)"});
+    $(".gpssTop").fadeOut(50);
+    $('.saoTopCov').css("background","none")
+
 
 });
 $('.make').click(function(){
@@ -223,24 +236,22 @@ $('.make').click(function(){
     //     fontSize: '10em',
     //    }, '4000');
 });
+$('.asuwBack').click(function(){
+      
+    $(".discoverC").fadeIn(50);
+    $(".make").fadeIn(50);
+    $(".explore").fadeIn(50);
+    $('.saoTop').css({
+        background: "rgb(255,255,255)"});
+    $(".asuwTop").fadeOut(0);
+    $('.saoTopCov').css("background","none")
+    
+    
+
+});
   });
 
-//   $(function () {
-//     $('.item img').each(function () {
-//         $(this).data('original', this.src);
-//     }).mouseenter(function () {
-//         $(this).fadeOut(500, function(){
-//             $(this).attr('src', $(this).data('hover'));
-//             $(this).fadeIn(500);
-//         });
-//     }).mouseleave(function () {
-//         $(this).fadeOut(500, function(){
-//             $(this).attr('src', $(this).data('original'));
-//             $(this).fadeIn(500);
-//         });
-//     });
-// });
-    
+
 
 
 
