@@ -214,6 +214,7 @@
 .logos{
     height: inherit;
 }
+
 .logoRow{
     max-height: 15vh;
 }
@@ -369,4 +370,132 @@
 
     .saoSlider{
         width: 100%;
+    }
+
+    .rsoCover{
+        background: rgba(150,150,150,.3);
+        height: 100%;
+    }
+
+
+    .rsoBenefits{
+        background: url('http://static-18.sinclairstoryline.com/resources/media/f72969dc-bf03-495d-be7e-48d5074b72ed-large16x9_UW2.jpg') no-repeat center center fixed;
+        /* background-image: url('http://comotion.uw.edu/sites/default/files/styles/main_feature_image/public/thumbnails/image/5c5d984a-49d7-11e6-bf9f-36dd91314911-1020x382-2.jpg?itok=K-b5eDtN'); */
+        /* min-height: 300px;
+         */
+         min-height: 500px;
+        background-size: cover;
+    }
+    .benefitsCov{
+        background: rgba(255,255,255,.8);             min-height: 500px;
+        height: 100%;
+    }
+    .benefitsTitle{
+        padding: 10px;
+        margin: 0px;
+        font-size: 50px;
+    }
+    .spacesTabs{
+        border: none !important;
+        background: transparent !important
+        ;
+    }
+    .tabCont{
+        border: none !important;
+        padding: 0px !important;
+    }
+    .ui-tabs-nav{
+        background: transparent !important;
+        border: none !important;
+    }
+    .ui-tabs .ui-tabs-nav li{
+        margin: 10px !important;
+    }
+    .ui-tabs-tab{
+        background: transparent !important;
+        border: none !important;
+    }
+    .ui-tabs-anchor{
+        color: #454545 !important;
+        
+    }
+    a.uw-btn:hover, a.uw-btn:focus{
+        color: #85754d !important;
+    }
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+        font-size: 15px;
+    }
+    .benLink{
+        color: #0074bb !important;
+    }
+    .liBen{
+        width: 20%;
+        float: left;
+    }
+    a:hover, a:focus{
+        color: #c9c9c9 !important;
+    }
+    /* rso reg */
+    .rsoRegister{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .regIcon{
+        border-radius: 50%;
+    }
+    .regIc{
+        border-radius: 50%;
+        background-color: rgba(55,55,55,.1);                        opacity: 1;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+    .regContTop{
+        margin-top: 10%;
+    }
+    .regCont:hover .regIc{
+        /* color: white !important; */
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .regCont:hover .regIn{
+        /* visibility: visible; */
+        opacity: 1;
+    }
+    .regIn{
+        border-radius: 20%;
+        background-color: rgba(255,255,255,.7);
+        position: absolute;
+        /* visibility: hidden; */
+        width: 100%;
+        height: 200px;
+        top: 0%;
+        opacity: 0;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+ 
+    .regIcon [class^="ic-"]:before, [class*=" ic-"]:before{
+        font-size: 200px !important;
+    }
+    .regTitle{
+        font-size: 30px;
+        margin-top: 0px;
+        font-weight: 900;
+    }
+    .regTitleFind{
+        margin-bottom: -12%;
+        margin-top: 5% !important;
+    }
+    .regText{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .regSaoText{
+        margin-top: 0px;
     }

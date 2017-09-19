@@ -31,9 +31,13 @@
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 <script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <!-- // Add the new slick-theme.css if you want the default styling -->
 <!-- <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/> -->
     </head>
@@ -249,12 +253,23 @@ $('.asuwBack').click(function(){
     
 
 });
+// $('.regIc').mouseover(function(){
+      
+//     $(".regIn").fadeIn(50);
+//     $(".regIc").fadeOut(50);
+   
+    
+    
+
+// });
   });
 
 
 
 
-
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
 
 
 </script>
