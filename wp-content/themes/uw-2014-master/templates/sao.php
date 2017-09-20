@@ -253,15 +253,20 @@ $('.asuwBack').click(function(){
     
 
 });
-// $('.regIc').mouseover(function(){
+$('.rsoBack').click(function(){
       
-//     $(".regIn").fadeIn(50);
-//     $(".regIc").fadeOut(50);
-   
+    $(".discoverC").fadeIn(50);
+    $(".make").fadeIn(50);
+    $(".explore").fadeIn(50);
+    $('.saoTop').css({
+        background: "rgb(255,255,255)"});
+    $(".exploreTop").fadeOut(0);
+    $('.saoTopCov').css("background","none")
     
     
 
-// });
+});
+
   });
 
 

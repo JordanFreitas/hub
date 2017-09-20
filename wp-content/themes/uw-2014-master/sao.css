@@ -103,7 +103,16 @@
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     
-}      
+    
+}   
+/* .topCover:hover .rsoBack{
+    display: none;
+}    */
+.rsoBack{
+    margin-top: 5%;
+    left: 30%;
+    position: absolute !important;
+}
 .topCover:hover .exploreSub, .topCover:hover .makeSub, .topCover:hover .discoverSub{
     text-shadow: 1px 0px 50px white;
         -moz-transition: all 0.3s;
@@ -376,6 +385,12 @@
         background: rgba(150,150,150,.3);
         height: 100%;
     }
+    .rsoFind{
+        background: #ECE9E2;
+    }
+    .home-uw-links{
+        background: #ECE9E2 !important;        
+    }
 
 
     .rsoBenefits{
@@ -387,7 +402,7 @@
         background-size: cover;
     }
     .benefitsCov{
-        background: rgba(255,255,255,.8);             min-height: 500px;
+        background: rgba(255,255,255,.9);             min-height: 500px;
         height: 100%;
     }
     .benefitsTitle{
@@ -426,15 +441,24 @@
         font-size: 15px;
     }
     .benLink{
-        color: #0074bb !important;
+        /* color: #0074bb !important; */
     }
     .liBen{
         width: 20%;
         float: left;
+        margin: 1%;
+        font-size: 17px;
     }
     a:hover, a:focus{
         color: #c9c9c9 !important;
     }
+    .findClub{
+        z-index: 2;
+    }
+    .clubIcon{
+        z-index: 2;
+    }
+
     /* rso reg */
     .rsoRegister{
         display: inline-block;
@@ -446,7 +470,7 @@
     }
     .regIc{
         border-radius: 50%;
-        background-color: rgba(55,55,55,.1);                        opacity: 1;
+        background-color: rgba(55,55,55,.4);                        opacity: 1;
         -webkit-transition: all .5s ease;
         -moz-transition: all .5s ease;
         -o-transition: all .5s ease;
@@ -481,7 +505,10 @@
     }
  
     .regIcon [class^="ic-"]:before, [class*=" ic-"]:before{
-        font-size: 200px !important;
+        font-size: 200px;
+    }
+    .ic-social:before{
+        font-size: 400px !important;
     }
     .regTitle{
         font-size: 30px;
@@ -494,8 +521,16 @@
     }
     .regText{
         font-size: 22px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .regSaoText{
         margin-top: 0px;
+    }
+    /* manage */
+    .exploreImg{
+        height: 100% !important;
+    }
+    .exploreTop .container p{
+        margin: 0px;
+        line-height: 0;
     }
