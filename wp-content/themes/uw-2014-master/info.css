@@ -1,143 +1,170 @@
-.infoTop{
+.infoTop {
     background-image: url('https://group.skanska.com/49ee27/globalassets/externalcontent2/project/university-of-washington-husky-union-building-renovation-and-expansion-united-states/97b8065f-46fa-4eec-8094-ce0d679c16cd.1.jpg?height=400&width=825&scale=both&mode=crop&bgcolor=f3f3f3');
     height: 80vh;
     background-size: cover;
-    
 }
-
-.infoTitle{
+.infoTitle {
     text-align: center;
     width: 50%;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     font-weight: 400;
     font-size: 70px;
     margin-top: 4%;
     margin-left: 0;
     padding: 1%;
 }
-.infoTopInfo{
+.infoTopInfo {
     margin: 0 auto;
     overflow: hidden;
     /* padding-left: 50px; */
+    
     text-align: left;
     position: relative;
     z-index: 1;
     color: white;
     height: 100%;
     /* top: 10%; */
-    background-color: rgba(0,0,0,.45);
+    
+    background-color: rgba(0, 0, 0, .45);
 }
-
-
-.infoOptionSect{
+.infoOptionSect {
     width: 100%;
     text-align: center;
-    margin-top: 3%;    
+    margin-top: 3%;
 }
-
-.infoIntro{
-     color: white;
+.infoIntro {
+    color: white;
     position: absolute;
     font-size: 8em;
     width: 100%;
     text-align: center;
     /* background: rgba(0,0,0,.1); */
-    font-weight: 500; 
-
+    
+    font-weight: 500;
     /* color: #4b2e83;
     position: absolute;
     font-size: 8em;
     width: 100%;
     text-align: center;
     background: rgba(255,255,255,.5); */
-
 }
 /* top slider */
-.infoOpt{
+
+.infoOpt {
     font-size: 4em;
-    background: rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .1);
     font-weight: 600;
     color: white;
 }
-.infoSlide{
+.infoSlide {
     width: 100%;
     visibility: hidden;
     position: absolute;
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
     color: white !important;
     opacity: .5 !important;
     font-size: 10px !important;
 }
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
     color: white !important;
     opacity: 1 !important;
 }
 /* end top slider */
 
-
-.infoContact{
+.infoContact {
     background-color: white;
     position: relative;
 }
-.findTitle{
+.findTitle {
     margin-top: 0px !important;
     margin-bottom: 0px;
-        text-align: center;
-        font-size: 4em;
-         overflow: hidden;
-        padding-bottom: 3%;
+    text-align: center;
+    font-size: 4em;
+    overflow: hidden;
+    padding-bottom: 1%;
     padding-top: 3%;
-        z-index: 2;
-        width: 100%;
-        color: #4b2e83;
-        /* background: rgba(0,0,0,.3); */
-        /* color: white !important; */
-    }
-    .findTitle > span{
-        position: relative;
-        display: inline-block;
-    }
-    .findTitle > span:before, .findTitle > span:after{
-        content: '';
-        position: absolute;
-        top: 50%;
-        border-bottom: 2px solid;
-            width: 50%;
-        margin: 0 40px;
-    }
-    .findTitle > span:before{
-        right: 100%;
-    }
-    .findTitle > span:after{
-        left: 100%;
-    }
-    .contactinfoText{
-        margin-top: 5px;
-        margin-bottom: 5px;
-        color: #555555;
-    }
+    z-index: 2;
+    width: 100%;
+    color: #4b2e83;
+    /* background: rgba(0,0,0,.3); */
+    /* color: white !important; */
+}
+.findTitle > span {
+    position: relative;
+    display: inline-block;
+}
+.findTitle > span:before,
+.findTitle > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 50%;
+    margin: 0 40px;
+}
+.findTitle > span:before {
+    right: 100%;
+}
+.findTitle > span:after {
+    left: 100%;
+}
+.contactInfoText {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #555555;
+}
+.ticketCont {
+    min-height: 500px;
+}
+.lostF {
+    min-height: 500px;
+}
+.map {
+    min-height: 500px;
+}
+.advert {
+    min-height: 500px;
+}
+.cashier {
+    min-height: 500px;
+}
+.tech {
+    min-height: 500px;
+}
+.infoSubTitle {
+    font-weight: 800;
+    text-align: center;
 
-    .ticketCont{
-        min-height: 500px;
-    }
-    .lostF{
-        min-height: 500px;
-        
-    }
-    .map{
-        min-height: 500px;
-        
-    }
-    .advert{
-        min-height: 500px;
-        
-    }
-    .cashier{
-        min-height: 500px;
-        
-    }
-    .tech{
-        min-height: 500px;
-        
-    }
+}
+.infoImg{
+    min-height: 200px;
+    height: 300px;
+    width: 100%;
+}
+.ticketOffice, .lostF, .infoDesk, .event{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    height: 600px;
+    margin: 2%;
+    width: 46%;}
+
+/* advertisement  */
+.advert{
+    background-color:#ECE9E2;    
+    height: 600px
+}
+.reserveBtnSect{
+    margin-left: 3%;
+    font-size: 20px !important;
+    background-color: #fff !important;
+}
+.reserveSlider{
+    margin: -20px 0 5% 0 !important;
+}
+.slide{
+    background-color: #ECE9E2 !important;
+}
+.hubAdTitle{
+    margin-bottom: 10px;
+}
