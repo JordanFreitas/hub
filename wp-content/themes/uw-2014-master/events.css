@@ -235,3 +235,48 @@ margin: 2%;}
           .discover .box-outer .box .tile:hover{
               background-color: white;
           }
+
+          /* responsive */
+          @media(max-width: 750px){
+            .eventOptTitle{
+                overflow: hidden;
+            }
+            .imgEventSlide::before{
+                display: none;
+            }
+            .slick-slider{
+                margin: 3%;
+            }
+            .slick-arrow{
+                display: none !important;
+            }
+            .frontpage{
+                overflow: hidden;
+            }
+            .eventTopInfo{
+                padding-left: 0px;
+            }
+            .eventTitle{
+                font-size: 55px;
+            }
+            .contactEvent{
+                display: none;
+            }
+          }
+          @media(min-width:751px) and (max-width: 1050px){
+            .imgEventSlide::before{
+                display: none;
+            }
+            .eventOptTitle{
+                overflow: hidden;
+            }
+            .frontpage{
+                overflow: hidden;
+            }
+            .slick-arrow{
+                display: none !important;
+            }
+            .discover .card-image{
+                height: 200px;
+            }
+          }            

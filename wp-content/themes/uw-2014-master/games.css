@@ -16,12 +16,10 @@
     color: #fff;
 }
 .gamesVidInfo{
+    height: 80%;
     position: absolute;
-    /* text-align: center; */
     top: 35%;
-    /* left: 0; */
     width: 100%;
-    /* text-align: center; */
     background: rgba(0,0,0,.4);
     color: #fff;
     padding: 1rem;
@@ -58,7 +56,9 @@ a.uw-btn:before{
     font-size: 150px !important;
 }
 .gameSocial{
-    display: inline-flex;
+    /* display: inline-flex; */
+    width: 100%;
+    text-align: center;
 }
 /*games contact*/
 .gameContact{
@@ -391,3 +391,131 @@ div.uw-slideshow > div.slide{
           
       }
       /* END EVENT TOOLBAR */
+      .topGameVid{
+        margin: 40px 0 20px;
+        width: 100%;
+        min-height: 850px;
+      }
+      .homeHours{
+        top: 60%;
+      }
+      /* responsive changes */
+      @media(width: 320px){
+          /* .homeHours{
+              top:97%;
+          } */
+      }
+      @media(max-width: 750px){
+          .gamesTop{
+            background-position: left;
+            background-image: url(http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/poolProfile-1024x1024.jpg);
+          }
+          .gameSocial{
+              display: none;
+          }
+          .gamesVidInfo{
+              top: 17%;
+          }
+          .game-title{
+              font-size: 90px !important;
+          }
+          .topGameVid{
+              display: none;
+          }
+          .slick-arrow{
+              display: none !important;
+          }
+          .gamesVid{
+              width: 100% !important;
+          }
+          .frontpage{
+              overflow: hidden;
+          }
+          .gameTitleCont{
+            padding-left: 15px !important;
+          }
+          .gamesVidLabel{
+              font-size: 35px !important;
+          }
+          .gameType{
+              height: 100%;
+          }
+          .showSlider{
+              display: none;
+          }
+          .gameBlockLabel{
+              font-size: 60px;
+          }
+          .imgEventSlide{
+              pointer-events: none;
+          }
+          .eventFull:hover .eventDayBox{
+            display: inline-block;
+          }
+          .gamesReserveBtn{
+              display: none;
+          }
+        .homeHours{
+            /* top:70%; */
+            padding-top: 10%;
+        }
+        .hours{
+            font-size: 25px;
+        }
+        .hourTime{
+            font-size: 20px;
+        }
+        .slick-slider{
+            text-align: center;
+        }
+      }        
+      @media(min-width:751px) and (max-width: 1050px){
+        .gamesVid{
+            display: none;
+        }
+        .slick-arrow{
+            display: none !important;
+        }
+        .reserveGames{
+            height: unset;
+            min-height: 600px;
+        }
+        .slick-slider{
+            text-align: center;
+        }
+        .gamesTop{
+            background-position: left;
+            background-image: url(http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/poolProfile-1024x1024.jpg);
+          }
+          .uw-mobile-menu-toggle{
+            /* display: none !important; */
+        }
+        .gamesVidInfo{
+            top: 30%
+        }
+        .game-title {
+            font-size: 100px !important;
+        }
+        .gamesVidLabel{
+            font-size: 50px;
+        }
+        .homeHours {
+            top: 50%;
+        }
+    }      
+    /* @media(width:1024px){  
+    .homeHours {
+        top: 25%;
+    }
+} */
+      @media(min-width:2000px){
+      .reserveGames{
+        height: 900px;
+      }
+      
+      .homeHours {
+        top: 63%;
+        right: 6%;
+        position: absolute;
+    }
+    }

@@ -222,6 +222,7 @@
 }
 .logos{
     height: inherit;
+    background: rgba(255,255,255,.8);
 }
 
 .logoRow{
@@ -470,7 +471,8 @@
     }
     .regIc{
         border-radius: 50%;
-        background-color: rgba(55,55,55,.4);                        opacity: 1;
+        /* background-color: rgba(55,55,55,.4);  */
+                               opacity: 1;
         -webkit-transition: all .5s ease;
         -moz-transition: all .5s ease;
         -o-transition: all .5s ease;
@@ -533,4 +535,112 @@
     .exploreTop .container p{
         margin: 0px;
         line-height: 0;
+    }
+
+    .exploreSlideCov{
+        background: rgba(0,0,0,.3);
+    }
+
+    /* responsive */
+    @media(max-width: 450px){
+        .clubIcon{
+            display: none;
+        }
+        .discoverC{
+            clip-path: polygon(0% 65%, 100% 65%, 100% 35%, 0% 35%);
+        }
+       .explore{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
+    }
+        .make{
+            clip-path: polygon(0% 100%, 100% 100%, 100% 65%, 0% 65%);
+        }
+        .gpssText{
+            font-size: 14px;
+        }
+        .gpssTitle{
+            font-size: 3em;
+        }
+        .logos{
+            display: none;
+        }
+        .asuwTitle{
+            font-size: 3.5em;
+        }
+        .asuwText{
+            font-size: 17px;
+        }
+    
+        .uw-mobile-menu-toggle{
+            display: none !important;
+        }
+        .liBen{
+            width: 46%;
+            float: left;
+            margin: 2%;
+            font-size: 13px;
+        }
+        .exploreTop{
+            display: none;
+        }
+        .discoverSub{
+        text-align: center;
+        padding-top: 41%;
+        padding-left: 0%;
+        font-size: 5em;
+        }
+        .exploreSub{
+            text-align: center;
+        padding-left: 0%;
+        font-size: 5em;    
+        
+        }
+        .makeSub{
+            padding-top: 83%;
+            text-align: center;
+        padding-left: 0%;
+        font-size: 5em; 
+        }
+        .regIn{
+            width: inherit;
+        }
+        .findLink{
+            font-size: 20px !important;
+        }
+    }
+    
+
+    @media(min-width:451px) and (max-width: 1050px){
+        .clubIcon{
+            display: none;
+        }
+        .discoverSub{
+            font-size: 8em;
+            padding-left: 45%;
+            padding-top: 34%;
+        }
+        .exploreSub{
+            font-size: 8em;
+        }
+        .makeSub{
+            font-size: 8em;
+            padding-left: 4%;
+            padding-top: 69%;
+        }
+    }
+    @media(width:1024px) and (height: 768px){
+        .discoverSub{
+            padding-top: 17%;
+        }
+        .makeSub{
+            padding-top: 35%;
+        }
+    }
+    @media(min-width:1050px) and (max-width: 1400px){
+        .makeSub{
+        padding-top: 38%;
+        }
+        .discoverSub{
+            padding-top: 21%;
+        }
     }

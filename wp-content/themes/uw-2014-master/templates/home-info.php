@@ -27,15 +27,13 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/info.css?ver=3.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='uw-master-css'  href='../wp-content/themes/uw-2014-master/info.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../wp-content/plugins/slick/slick.css"/>
     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-<script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
-<!-- // Add the new slick-theme.css if you want the default styling -->
-<link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/>
+    <script type="text/javascript" src="../wp-content/plugins/slick/slick.min.js"></script>
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="../wp-content/plugins/slick/slick-theme.css"/>
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->

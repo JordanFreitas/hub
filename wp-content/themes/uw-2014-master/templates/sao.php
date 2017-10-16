@@ -27,19 +27,18 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/sao.css?ver=3.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='uw-master-css'  href='../wp-content/themes/uw-2014-master/sao.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../wp-content/plugins/slick/slick.css"/>
     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-<script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/slick/slick.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <!-- // Add the new slick-theme.css if you want the default styling -->
-<!-- <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick-theme.css"/> -->
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
@@ -188,7 +187,12 @@
   });
 
   $('.explore').click(function(){
-      
+    if( $(window).width() < 1050 ){
+        var divID = '#findRSO' + this.id;
+        $('html, body').animate({
+            scrollTop: $(divID).offset().top
+    }, 2000);
+    }else{
     $(".discoverC").fadeOut(500);
     $(".make").fadeOut(500);
     $(".explore").fadeOut(500);
@@ -197,10 +201,12 @@
         backgroundPositionY: "-300px",
         backgroundSize: "cover"}).fadeIn(750);
     $(".exploreTop").fadeIn(1000);
-
+    }
 });
+
+
+
 $('.discoverC').click(function(){
-      
     $(".discoverC").fadeOut(500);
     $(".make").fadeOut(500);
     $(".explore").fadeOut(500);
@@ -234,6 +240,7 @@ $('.make').click(function(){
         backgroundSize: "cover"}).fadeIn(750);
     $('.saoTopCov').css("background","rgba(255,255,255,.6)")
     $(".asuwTop").fadeIn(500);
+
 
     // $('.exploreSub').animate({
     //     opacity: .25,

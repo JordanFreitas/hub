@@ -26,8 +26,7 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <!-- <link rel='stylesheet' id='admin-bar-css'  href='http://localhost/hub/wp-includes/css/admin-bar.min.css?ver=4.8.1' type='text/css' media='all' />		 -->
-<link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/homepage.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='uw-master-css'  href='../wp-content/themes/uw-2014-master/homepage.css?ver=3.6' type='text/css' media='all' />
 <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
@@ -70,29 +69,13 @@ $(window).scroll(function(){
   $(".homeHours").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
-
-//   $('#home1').hover(function(){
-//     $('#homeSelect1').css("display","inline")
-// });
-// $('#home2').hover(function(){
-//     $('#homeSelect2').css("display","inline")
-// });
-// $('#home3').hover(function(){
-//     $('#homeSelect3').css("display","inline")
-// });
 function initMap() {
        map = new google.maps.Map(document.getElementById('map'), {
           center: {lat:47.655498, lng:-122.305189},
           zoom: 15
         });
 
-     var iconBase = 'https://furtaev.ru/preview/car_parking_map_pointer_small.png';
-
-
-
-
-
-
+    //  var iconBase = 'https://furtaev.ru/preview/car_parking_map_pointer_small.png';
 
     var marker = new google.maps.Marker({
     position: new google.maps.LatLng(47.655498, -122.305189),
@@ -100,13 +83,13 @@ function initMap() {
     title: 'Husky Union Building',
     animation: google.maps.Animation.DROP
   });
-     var parkingMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(47.660474, -122.308831),
-    map: map,
-    title: 'Padelford Parking Garage',
-    animation: google.maps.Animation.DROP,
-    icon: iconBase
-  });
+  //    var parkingMarker = new google.maps.Marker({
+  //   position: new google.maps.LatLng(47.660474, -122.308831),
+  //   map: map,
+  //   title: 'Padelford Parking Garage',
+  //   animation: google.maps.Animation.DROP
+  //   // icon: iconBase
+  // });
 
   47.660474, -122.308831
   marker.setMap(map);

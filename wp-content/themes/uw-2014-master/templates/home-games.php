@@ -5,7 +5,7 @@
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
     <head>
         <title> <?php wp_title(' | ',TRUE,'right'); bloginfo('name'); ?> </title>
         <meta charset="utf-8">
@@ -26,11 +26,13 @@
         echo get_post_meta( get_the_ID() , 'javascript' , 'true' );
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6' type='text/css' media='all' />
+    <!-- <link rel='stylesheet' id='uw-master-css'  href='https://depts.washington.edu/hubway/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6%27' type='text/css' media='all' /> -->
+    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6%27' type='text/css' media='all' />
+    
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="http://localhost/hub/wp-content/plugins/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://depts.washington.edu/hubway/hub/wp-content/plugins/slick/slick.css"/>
 
-    <script type="text/javascript" src="http://localhost/hub/wp-content/plugins/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://depts.washington.edu/hubway/hub/wp-content/plugins/slick/slick.min.js"></script>
 
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
@@ -83,7 +85,7 @@
     
     //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
-    var feed = "http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=exfsp9BbGwOa3zSOgl8KgBXBFMpkD%2f8wB4cyJyjsaky0zfodIX0a4vbFGmpnTFgw";
+    var feed = "https://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=exfsp9BbGwOa3zSOgl8KgBXBFMpkD%2f8wB4cyJyjsaky0zfodIX0a4vbFGmpnTFgw";
     
     $.ajax(feed, {
         accepts:{
@@ -113,15 +115,10 @@
                   var eMonth = months[dateParse[0]-1];
                   var eDay = dateParse[1];
                   var eYear = dateParse[2];
-                //   var eDateHTML = '<div class="eventDayBox col-md-4"> <div class="eventMonth">' + eMonth + '</div><div class="eventDay">' + eDay + '</div></div>';
-                //   console.log(eMonth, eDay, eYear);
-                //   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
-                //   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
-                //   var slideFull = '<div class="eventFull">' + eTitleHTML + eDateHTML + eLocHTML + eTimeHTML + '</div>';
                     var eDateHTML = '<div class="eventDayBox col-md-3"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
                     // var imgHTML = '<img class = "imgEventSlide col-md-4" src="https://c.tadst.com/gfx/1200x630/calendar.png?1" alt="">';
-                    var iconHTML = '<a href="#" class="imgEventSlide col-md-3 ic-calendar"></a>';
-                  console.log(eMonth, eDay, eYear);
+                    var iconHTML = '<a class="imgEventSlide col-md-3 ic-calendar"></a>';
+                  // console.log(eMonth, eDay, eYear);
                   var eLocHTML = '<div class="eventLoc col-md-8">' + eventItem.eLoc + '</div>';
                   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
                   var slideFull = '<div class="eventFull">' + eDateHTML + iconHTML + eTitleHTML + eLocHTML + eTimeHTML + '</div>';
@@ -148,52 +145,6 @@
   });
       
 });
-    // $.ajax(feed, {
-    //     accepts:{
-    //         xml:"application/rss+xml"
-    //     },
-    //     dataType:"xml",
-    //     success:function(data) {
-            
-    //         var slde = '<div class="slide">';
-    //         var aslde = '<a class = "slideA" title="Slide title" href="#">';
-    //         var img = '<img title="Image title" src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/21015881_1850118501683348_2034974718194203291_o.jpg?oh=af11400bea19d178ac394b46dfa258d0&oe=5A2F9867" alt="Image title" />';
-            
-    //         $(data).find("item").each(function () { 
-    //             var feedInst = $(this);
-    //               eventItem = {
-    //                 title:       feedInst.find("title").text(),
-    //                 link:        feedInst.find("link").text(),
-    //                 description: feedInst.find("description").text(),
-    //               }
-    //               var before = '<div class="slide"><a title="Slide title" href="#"><img title="Image title" src="http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/Video-2-1024x678.jpg" alt="Image title" /></a><div><h3><a title="Slide title" href="#">' + eventItem.title + '</a></h3><p>Lorem ipsum.</p></div></div>';
-    //               var after = eventItem.title;
-    //               var aft = eventItem.link;
-
-
-                 
-    //                 $('#rssSlider')
-    //                 // .append(start)
-    //                 .append(before);
-    //                 // .wrap('<div>')
-    //                 // .append(aft);
-
-    //                 // .append(slde);
-
-    //                 $('.slide')
-    //                 .append(aslde);
-    //                 $('.slideA')
-    //                 .append(img);
-
-    //            console.log(before);
-    //         });
-    
-
-    //     }   
-    // });
-    
-
-
 
 </script>
 <script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>

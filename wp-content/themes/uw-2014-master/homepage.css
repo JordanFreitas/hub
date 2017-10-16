@@ -10612,6 +10612,9 @@ a.tag:hover {
   border-bottom: none;
 }
 /*----------------------------jordan----------------*/
+.whiteCov{
+  background: white;
+}
 .uw-links {
   position: relative;
   margin-left: -15px;
@@ -10871,7 +10874,7 @@ margin-top: -1%;
 }
 .findClub{
   z-index: 1;
-  height: 400px;
+  min-height: 400px;
 }
 .iconFont [class^="ic-social"]:before, [class*=" ic-social"]:before{
   font-size: 400px !important;
@@ -10947,6 +10950,7 @@ padding-top: 5%;
 .uw-body-home{
 padding-top: 0px !important;
     width: 80%;
+    left: 10%;
 }
 .hero-content-home{
 margin-top: 0px !important;
@@ -11007,4 +11011,59 @@ padding: 10px 0 0 20px;
     display: none;
   }
 
+}
+@media(max-width: 750px){
+  .homeVidFrame{
+    display:none;
+  }
+  .video-foreground{
+    width:100%;
+    left:0%;
+  }
+  .uw-content{
+    overflow: hidden;
+  }
+  .uw-body-home{
+    left: 0%;
+    width: 100%;
+  }
+  .selectionHome{
+    display: none;
+  }
+  .vid-info{
+    width: 100% !important;
+    top:10%;
+  }
+  .video-foreground{
+    background: url('http://cplinc.com/wp-content/uploads/2014/03/UW-HUB-31.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .exploreSlideCov{
+    background: none;
+  }
+  .card-image{
+    display: none !important;
+  }
+  .clubIcon{
+    display: none;
+  }
+}
+@media(min-width:751px) and (max-width: 1050px){
+  .uw-body-home{
+    left: 0%;
+    width: 100%;
+  }
+  .vid-info{
+    width: 50% !important;
+    top:10%;
+  }
+  .selectionHome{
+    top: 43%;
+    right: 23%;
+  }
+  .clubIcon{
+    display: none;
+  }
 }
