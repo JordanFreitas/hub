@@ -280,3 +280,8 @@ margin: 2%;}
                 height: 200px;
             }
           }            
+          @media(min-width:2000px){
+            .discover .box-outer .box .tile{
+                padding: 0px 121px 28px;   
+            }
+          }
