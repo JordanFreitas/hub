@@ -1,0 +1,106 @@
+p {
+    margin: 0px !important;
+}
+/* .r145:hover{
+    color: rgba(0,0,0,.5);
+}
+.Lyceum{
+    color: rgba(0,0,0,.5);
+    
+} */
+.area {
+    /* background:#fff; */
+    display:block;
+    /* height:475px; */
+    opacity:0;
+    position:absolute;
+    /* width:320px; */
+    fill: none;
+
+}
+.area:hover{
+    fill: #FF000000;
+}
+/* #Lyceum {
+    left:320px;
+} */
+#Lyceum:hover, #r145:hover {
+    opacity:0.2;
+}
+.uw-footer{
+    clear: both;
+}
+
+/* SIDEBAR */
+.rTitle{
+    color: black;
+    font-family: "Encode Sans Compressed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 75px;
+}
+.rPic{
+    height: 250px;
+    background-position: bottom;
+    width: 100%;
+}
+
+    /* EVENT TOOLBAR  */
+    .eventDayBox{
+        width: 60px;
+        height: 60px;
+        border-right: 1px solid #aaa;
+        text-align: center;
+        display: inline-block;
+        margin: 15px;
+        color: #5e5f61;
+        background: #fff;
+    }
+    
+        .eventDay{
+            margin-bottom: -13px;
+            margin-top: -10px;
+            font-size: 35px;
+        }
+        .eventMonth{
+            color: #613ba9;
+            font-weight: 900;
+            font-family: "Encode Sans Compressed", sans-serif;
+        }
+        .eventSlide{
+            background-color: white;
+            position: relative;
+            padding-bottom: 3%;
+        }
+        .eventSlideTitle{
+            font-weight: 900;
+            padding-left: 0px;
+        }
+        .eventLoc{
+            padding-left: 0px;
+            
+        }
+        .eventTime{
+            padding-left: 0px;
+            
+        }
+        .eventFull{
+            border: 2px solid #FFF;
+            -webkit-transition:0.5s;
+        }
+        /* .eventFull:hover {
+            /* background: #4b2e83;
+            color: white;
+            border: 2px solid #4b2e83; */
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);
+    
+            /* color: #FFF; */
+          } */
+          /* .eventFull:hover .imgEventSlide{
+            opacity: 1;
+            height: auto;
+            
+          }
+          .eventFull:hover .eventDayBox{
+            display: none;
+          } */
