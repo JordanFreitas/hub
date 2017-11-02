@@ -3,10 +3,48 @@
     var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
     var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
                                 "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
-    function Lyceum() {
-        $('.rPic').css('background-image', 'url("https://d1bzei02dh3yoz.cloudfront.net/images/spaces/95/hub-lyceum_5__large.jpg")');
-        $('#rT').innerHTML="LYCEUM";
 
+    function info(roomData) {
+        console.log(roomData)
+        var rBool = false;
+        switch (roomData.toLowerCase()) {
+            case "lyceum":
+                $('.rPic').css('background-image', 'url("https://d1bzei02dh3yoz.cloudfront.net/images/spaces/95/hub-lyceum_5__large.jpg")');        
+                break;
+            case "145":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');                    
+                break;
+            case "commuter commons":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+            case "student services":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+            case "admin suite":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+            case "info tech":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+             case "resource center":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+             case "us bank":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/usbanklogo.jpg")');        
+                break;
+             case "bike shop":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+                 case "welcome center":
+            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+                break;
+                 case "112":
+            default:
+            $('.rPic').css('background-image', '');                    
+        }
+        document.getElementById('rT').innerText = roomData;
+    
+        
     $.ajax(feed, {
         accepts:{
             xml:"application/rss+xml"
@@ -28,65 +66,32 @@
                   var eDay = dateParse[1];
                   var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
                   var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
-                  var slideFull = '<div class="eventFull">' + eDateHTML  + eTitleHTML + eTimeHTML + '</div>';
-                  console.log(eventItem.eLoc);
-                  if(eventItem.eLoc.toLowerCase().includes("lyceum")){
+                  var slideFull = '<div id="eventList" class="eventFull">' + eDateHTML  + eTitleHTML + eTimeHTML + '</div>';
+                  var check = roomData.toLowerCase();
+                  if(eventItem.eLoc.toLowerCase().includes(check)){
+                      rBool = true;
                     $("#eSlide").append(slideFull);
                   }
             });
-            $('#eSlide').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
-            $('#eSlide').slick({
-                arrows: true,
-                infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 2
-          });
+          var eventList = document.getElementById('eSlide'); 
+          if (rBool == false){
+              if (eventList != null) {
+                  //removes slider components if not an event room
+                   $('#eSlide div').empty();
+              }
+          }
+          $('#eSlide').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
+          
+          $('#eSlide').slick({
+            arrows: true,
+            infinite: false,
+      slidesToShow: 2,
+      slidesToScroll: 2
+      });
         }   
+        
     });
-    
-
-    }
-    function r145() {
-        $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');
-        $('.rTitle').innerHTML = "HUB 145";
-    $.ajax(feed, {
-        accepts:{
-            xml:"application/rss+xml"
-        },
-        dataType:"xml",
-        success:function(data) {
-            $(data).find("item").each(function () { 
-                var feedInst = $(this);
-                  eventItem = {
-                    eTitle:       feedInst.find("title").text(),
-                    eLoc: feedInst.find("mc\\:location, location").text(),
-                    eDate: feedInst.find("mc\\:EventDate, EventDate").text(),
-                    eStart: feedInst.find("mc\\:StartTime, StartTime").text(),
-                    eEnd: feedInst.find("mc\\:EndTime, EndTime").text(),                
-                  }
-                  var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,20) + '</div>';
-                  var dateParse = eventItem.eDate.split("/");
-                  var eMonth = months[dateParse[0]-1];
-                  var eDay = dateParse[1];
-                  var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
-                  var eTimeHTML = '<div class="eventTime col-md-8">' + eventItem.eStart + ' - ' + eventItem.eEnd + '</div>';
-                  var slideFull = '<div class="eventFull">' + eDateHTML  + eTitleHTML + eTimeHTML + '</div>';
-                  console.log(eventItem.eLoc);
-                  if(eventItem.eLoc.toLowerCase().includes("145")){
-                    $("#eSlide").append(slideFull);
-                  }
-            });
-            $('#eSlide').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
-            $('#eSlide').slick({
-                arrows: true,
-                infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 2
-          });
-        }   
-    });
-    
-
+  
     }
   $(document).ready(function() {
    
@@ -95,11 +100,6 @@ jQuery(document).ready(function($){
     $('p > img').unwrap();
 });
    
-
-
-
-
-
     $('#eSlide').slick({
         arrows: true,
         infinite: true,
@@ -190,15 +190,9 @@ $('.rsoBack').click(function(){
         background: "rgb(255,255,255)"});
     $(".exploreTop").fadeOut(0);
     $('.saoTopCov').css("background","none")
-    
-    
-
 });
 
   });
-
-
-
 
   $( function() {
     $( "#tabs" ).tabs();

@@ -2,31 +2,51 @@
         <div class="row">                
 <div id="info" class = "col-md-3">
 <div class="rPic"></div>
-<h1 id="rT" class="rTitle">Room</h1>
+<h1 id="rT"></h1>
 <div class="rEvents">
         <div class="row">
-                <div class="findTop">
-                        </h1>
-                    </div>
+               
                 <div id="eSlide" class="eventSlideContent">
         
                 </div>
         </div>
 </div>
+<div id="roomInfo"></div>
 </div>
-<img id="mapImg" class = "col-md-9" src="http://localhost/hub/wp-content/uploads/2017/10/FIRST_FLOOR_UPDATED_SARA.jpg" width="5127" height="3302" usemap="#image-map">
-<map name="image-map">
-    <area class = "area" id="r145" alt="HUB 145" title="HUB 145" coords="1356,1705,1682,1461,1881,1723,1981,1732,1977,2031,1755,2194,1709,2176" onmousedown="r145()" shape="poly">
-    <area class = "area" id="Lyceum"  alt="Lyceum" title="Lyceum"  coords="296,1325,1157,728,1184,750,1202,714,1573,1234,677,1868" onmousedown="Lyceum()" shape="poly">
-    <area class = "area" id="commuterCommons" target="_blank" alt="Commuter Commons" title="Commuter Commons" href="" coords="1759,2194,1995,2031,1972,1524,2180,1529,2189,2248,1791,2248" shape="poly">
-    <area class = "area" id="studentServices" target="_blank" alt="ASUW Commissions and Student Services" title="ASUW Commissions and Student Services" href="" coords="2589,1130,2594,1171,2558,1171,2558,1379,2226,1397,2227,1506,2186,1524,2189,2248,2896,2248,2893,1135" shape="poly">
-    <area class = "area" id="adminSuite" target="_blank" alt="ASUW Admin Suites" title="ASUW Admin Suites" href="" coords="2896,1126,3295,1126,3299,2094,3154,2085,3136,2248,2896,2253" shape="poly">
-    <area class = "area" id="infoTech" target="_blank" alt="Event Information and Tech Services" title="Event Information and Tech Services" href="" coords="3313,1135,3308,2085,3775,2085,3775,1144" shape="poly">
-    <area class = "area" id="resourceCenter" target="_blank" alt="Resource Center" title="Resource Center" href="" coords="3784,1126,3784,2085,4255,2085,4241,1909,4798,1904,4798,1687,4599,1687,4572,1488,3974,1470,3956,1415,3929,1415,3929,1171,3856,1180,3865,1126" shape="poly">
-    <area class = "area" id="usBank" target="_blank" alt="U.S. Bank" title="U.S. Bank" href="" coords="4218,1135,4218,1470,4585,1470,4581,1135" shape="poly">
-    <area class = "area" id="bikeShop" target="_blank" alt="ASUW Bike Shop" title="ASUW Bike Shop" href="" coords="4590,1126,4798,1126,4789,1678,4608,1687" shape="poly">
-    <area class = "area" id="welcomeCenter" target="_blank" alt="Welcome Center" title="Welcome Center" href="" coords="3974,556,3974,728,4128,728,4128,791,4472,800,4477,547" shape="poly">
-    <area class = "area" id="112" target="_blank" alt="112" title="112" href="" coords="3304,384,3313,456,3503,456,3498,239,3322,239,3331,384,3304,384" shape="poly">
-</map>
+<div class="firstFloor">
+        <img id="mapImg" class = "col-md-9" src="http://localhost/hub/wp-content/uploads/2017/10/FIRST_FLOOR_UPDATED_SARA.jpg" width="5127" height="3302" usemap="#image-map">
+        <map name="image-map">
+            <area class = "area" id="r145" alt="HUB 145" title="HUB 145" coords="1356,1705,1682,1461,1881,1723,1981,1732,1977,2031,1755,2194,1709,2176" onmousedown="info('145')" shape="poly">
+            <area class = "area" id="Lyceum"  alt="Lyceum" title="Lyceum"  coords="296,1325,1157,728,1184,750,1202,714,1573,1234,677,1868" onmousedown="info('LYCEUM')" shape="poly">
+            <area class = "area" id="commuterCommons"  alt="Commuter Commons" title="Commuter Commons"  coords="1759,2194,1995,2031,1972,1524,2180,1529,2189,2248,1791,2248" onmousedown="info('Commuter Commons')" shape="poly">
+            <area class = "area" id="studentServices"  alt="ASUW Commissions and Student Services" title="ASUW Commissions and Student Services"  coords="2589,1130,2594,1171,2558,1171,2558,1379,2226,1397,2227,1506,2186,1524,2189,2248,2896,2248,2893,1135" onmousedown="info('Student Services')" shape="poly">
+            <area class = "area" id="adminSuite" alt="ASUW Admin Suites" title="ASUW Admin Suites"  coords="2896,1126,3295,1126,3299,2094,3154,2085,3136,2248,2896,2253" onmousedown="info('Admin Suite')" shape="poly">
+            <area class = "area" id="infoTech" alt="Event Information and Tech Services" title="Event Information and Tech Services"  coords="3313,1135,3308,2085,3775,2085,3775,1144" onmousedown="info('Info Tech')" shape="poly">
+            <area class = "area" id="resourceCenter" alt="Resource Center" title="Resource Center"  coords="3784,1126,3784,2085,4255,2085,4241,1909,4798,1904,4798,1687,4599,1687,4572,1488,3974,1470,3956,1415,3929,1415,3929,1171,3856,1180,3865,1126" onmousedown="info('Resource Center')" shape="poly">
+            <area class = "area" id="usBank" alt="U.S. Bank" title="U.S. Bank"  coords="4218,1135,4218,1470,4585,1470,4581,1135" onmousedown="info('US Bank')" shape="poly">
+            <area class = "area" id="bikeShop" alt="ASUW Bike Shop" title="ASUW Bike Shop"  coords="4590,1126,4798,1126,4789,1678,4608,1687" onmousedown="info('Bike Shop')" shape="poly">
+            <area class = "area" id="welcomeCenter" alt="Welcome Center" title="Welcome Center"  coords="3974,556,3974,728,4128,728,4128,791,4472,800,4477,547" onmousedown="info('Welcome Center')" shape="poly">
+            <area class = "area" id="112" alt="112" title="112"  coords="3304,384,3313,456,3503,456,3498,239,3322,239,3331,384,3304,384" onmousedown="info('112')" shape="poly">
+        </map>
+</div>
+<div class="secondFloor"><!-- Image Map Generated by http://www.image-map.net/ -->
+        <img src="_SECOND_FLOOR_UPDATED_SARA.jpg" usemap="#image-map">
+        
+        <map name="image-map">
+            <area target="" alt="HUB 250" title="HUB 250" href="" coords="1457,1141,1169,738,1385,572,1759,572,1773,932" shape="poly">
+            <area target="" alt="HUB 238" title="HUB 238" href="" coords="2118,414,2269,414,2269,738,2118,738" shape="poly">
+            <area target="" alt="South Prefunction" title="South Prefunction" href="" coords="1644,1486,1356,1687,1658,2111,1788,2111,1788,1687" shape="poly">
+            <area target="" alt="South Ballroom" title="South Ballroom" href="" coords="1932,2107,2938,2107,2931,1446,1946,1453" shape="poly">
+            <area target="" alt="North Ballroom" title="North Ballroom" href="" coords="2938,2129,4218,2114,4218,1470,2938,1467" shape="poly">
+            <area target="" alt="North Foosa" title="North Foosa" href="" coords="4233,1614,4434,1614,4434,1168,4247,1168" shape="poly">
+            <area target="" alt="North Prefunction" title="North Prefunction" href="" coords="4218,1755,4535,1762,4535,1942,4765,1942,4779,1158,4434,1158,4434,1618,4225,1618" shape="poly">
+            <area target="" alt="HUB 214" title="HUB 214" href="" coords="3478,650,3478,226,3744,226,3744,657" shape="poly">
+            <area target="" alt="FIUTS" title="FIUTS" href="" coords="3909,823,3902,693,3945,686,3938,571,4434,571,4434,823" shape="poly">
+            <area target="" alt="Student Activity Office" title="Student Activity Office" href="" coords="2622,404,3247,404,3247,685,3305,692,3305,814,2622,828" shape="poly">
+            <area target="" alt="Office of Fraternity and Sorority Life" title="Office of Fraternity and Sorority Life" href="" coords="2277,397,2607,404,2607,814,2118,836,2104,749,2291,757" shape="poly">
+            <area target="" alt="South Kitchen" title="South Kitchen" href="" coords="2047,1152,2061,1325,2694,1325,2694,1267,2794,1267,2794,1174" shape="poly">
+            <area target="" alt="HUB Mural Lounge" title="HUB Mural Lounge" href="" coords="3247,1129,3902,1151,3887,698,3312,690,3327,820,3226,899" shape="poly">
+        </map></div>
+
 </div>
 </div>
