@@ -30,7 +30,6 @@
     <link rel='stylesheet' id='uw-master-css'  href='../wp-content/themes/uw-2014-master/maps.css?ver=3.6' type='text/css' media='all' />
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="../wp-content/plugins/slick/slick.css"/>
-    <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <script type="text/javascript" src="../wp-content/plugins/slick/slick.min.js"></script>

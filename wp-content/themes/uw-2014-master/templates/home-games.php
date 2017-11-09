@@ -27,7 +27,7 @@
         echo get_post_meta( get_the_ID() , 'css' , 'true' );
         ?>
     <!-- <link rel='stylesheet' id='uw-master-css'  href='https://depts.washington.edu/hubway/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6%27' type='text/css' media='all' /> -->
-    <link rel='stylesheet' id='uw-master-css'  href='http://localhost/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6%27' type='text/css' media='all' />
+    <link rel='stylesheet' id='uw-master-css'  href='https://depts.washington.edu/hubway/hub/wp-content/themes/uw-2014-master/games.css?ver=3.6%27' type='text/css' media='all' />
     
     <link href="//www.washington.edu/static/home/wp-content/themes/boundless/style.css?ec3099f" id="homepage-css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="https://depts.washington.edu/hubway/hub/wp-content/plugins/slick/slick.css"/>

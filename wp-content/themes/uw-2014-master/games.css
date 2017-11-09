@@ -1,3 +1,7 @@
+.uw-hero-image{
+    height: 450px;
+    background-size: contain !important;
+}
 .gamesTop{
     height: 600px;
     position: static;
@@ -340,7 +344,7 @@ div.uw-slideshow > div.slide{
     }
     .eventSlide{
         background-color: white;
-        position: relative;
+        /* position: relative; */
         padding-bottom: 3%;
     }
     .eventSlideTitle{
@@ -399,6 +403,45 @@ div.uw-slideshow > div.slide{
       .homeHours{
         top: 60%;
       }
+      /* SLideshows */
+      .mainSlide{
+          z-index: 2;
+      }
+    
+      .slideCover{
+        position: absolute;
+        
+        height: 100%;
+        width: 100% !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        /* background-color: rgba(0, 0, 0, 0.35); */
+      }
+      .slideCover:hover{
+        background-color: rgba(0, 0, 0, 0.85);
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      .slideText{
+        color:white;
+        visibility: hidden;
+        width: 100%;
+        margin-top: 15%;
+        text-align: center;
+        opacity: 0;
+        transition: visibility 0s, opacity 1s linear;
+
+      }
+      .slideCover:hover .slideText{
+        visibility: visible;
+        opacity: 1;
+              }
+      
       /* responsive changes */
       @media(width: 320px){
           /* .homeHours{

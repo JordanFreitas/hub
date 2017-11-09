@@ -1,3 +1,4 @@
+    
    //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
     var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
@@ -36,7 +37,7 @@
             $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
                 break;
                  case "welcome center":
-            $('.rPic').css('background-image', 'url("http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub_145-6.jpg")');        
+            $('.rPic').css('background-image', 'url("https://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/09/hub-106_1.jpg")');        
                 break;
                  case "112":
             default:
