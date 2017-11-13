@@ -441,6 +441,9 @@ div.uw-slideshow > div.slide{
         visibility: visible;
         opacity: 1;
               }
+              .firstS{
+                  display: block !important;
+              }
       
       /* responsive changes */
       @media(width: 320px){

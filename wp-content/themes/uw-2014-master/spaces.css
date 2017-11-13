@@ -2,7 +2,7 @@
     height:auto;
 }
 .tabCont{
-    height: 500px;
+    /* height: 500px; */
     background-color: white;
     text-align: center;
     padding: 0px;
@@ -10,13 +10,12 @@
     margin-bottom: 3%;
 }
 .box4{
-height: 800px;
+/* height: 800px; */
 }
 .spaceTile{
     height: 400px;
     padding: 0px !important;
     margin: 1%;
-    width: 48%;
 }  
 .lyceum{
     background-image:     url("https://d1bzei02dh3yoz.cloudfront.net/images/spaces/95/hub-lyceum_5__large.jpg");

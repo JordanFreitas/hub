@@ -82,6 +82,7 @@
 <script>
   $(document).ready(function() {
     //feed to parse
+    $('.firstS').css("display", "block", "!important")
     
     //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
