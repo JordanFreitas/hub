@@ -193,6 +193,39 @@ $('.rsoBack').click(function(){
     $('.saoTopCov').css("background","none")
 });
 
+// $("#tabs")
+// .delegate("li.ui-tabs-selected","mousedown",function(){
+//   $tabs.tabs("load",$(this).index());
+// });
+
+$('#tab1').click(function(){
+    // $('#tabs-1').load(document.URL +  ' #tabs-1');
+    console.log("clicked");
+    // $('#tabs').tabs('load', 0);
+    // var current_index = $("#tabs").tabs("option","active");
+    // $("#tabs").tabs('load',current_index);
+    // var tab = $('#tabs').tabs('load', 0);
+    // tab.panel('refresh');
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-1";
+    location.reload();
+    // window.location.hash = 'tabs-1';
+    // window.location.reload();
+});
+$('#tab2').click(function(){
+    // $('#tabs-2').load(document.URL +  ' #tabs-2');
+    // console.log("clicked");
+    // $('#tabs').tabs('load', 1);
+    console.log("clicked");
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-2";
+    location.reload();
+    
+    // var tab = $('#tabs').tabs('load', 1);
+    // tab.panel('refresh');
+    
+    // window.location.hash = 'tabs-2';
+    // window.location.reload();
+});
+
   });
 
   $( function() {
