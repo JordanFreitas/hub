@@ -199,17 +199,9 @@ $('.rsoBack').click(function(){
 // });
 
 $('#tab1').click(function(){
-    // $('#tabs-1').load(document.URL +  ' #tabs-1');
     console.log("clicked");
-    // $('#tabs').tabs('load', 0);
-    // var current_index = $("#tabs").tabs("option","active");
-    // $("#tabs").tabs('load',current_index);
-    // var tab = $('#tabs').tabs('load', 0);
-    // tab.panel('refresh');
     window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-1";
     location.reload();
-    // window.location.hash = 'tabs-1';
-    // window.location.reload();
 });
 $('#tab2').click(function(){
     // $('#tabs-2').load(document.URL +  ' #tabs-2');
@@ -224,6 +216,26 @@ $('#tab2').click(function(){
     
     // window.location.hash = 'tabs-2';
     // window.location.reload();
+});
+$('#tab3').click(function(){
+    console.log("clicked");
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-3";
+    location.reload();
+});
+$('#tab4').click(function(){
+    console.log("clicked");
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-4";
+    location.reload();
+});
+$('#tab5').click(function(){
+    console.log("clicked");
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-5";
+    location.reload();
+});
+$('#tab6').click(function(){
+    console.log("clicked");
+    window.location = "https://depts.washington.edu/hubway/hub/hub-maps/#tabs-6";
+    location.reload();
 });
 
   });
