@@ -241,7 +241,8 @@ $('#tab6').click(function(){
   });
 
   $( function() {
-    $( "#tabs" ).tabs();
+    $( "#tabs" ).tabs()
+    .addClass('ui-tabs-vertical ui-helper-clearfix');
   } );
 
  
