@@ -1,0 +1,11 @@
+#husky100 .full-bio .linkedin{
+    /* background: url(../../plugins/hub100/assets/magWebSimple.png) no-repeat center center; */
+    background: url(../../plugins/hub100/assets/magWeb.png) no-repeat center center;    
+    background-size: contain;
+}
+#husky100 .full-bio .linkedin:hover,#husky100 .full-bio .linkedin:active{
+    /* background:url(../../plugins/hub100/assets/magWeb.png) no-repeat center center transparent; */
+    background: url(../../plugins/hub100/assets/pointerWeb.png) no-repeat center center;
+    transform: scale(1.2, 1.7);
+    background-size: 100%;
+}
