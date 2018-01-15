@@ -74,7 +74,7 @@ if ( ! post_type_exists( 'husky100' ) ):
 		add_meta_box( 'hometown', 'Large Preview', 'hometown_callback', 'husky100', 'side', 'low' );
 		add_meta_box( 'major', 'Small Preview', 'major_callback', 'husky100', 'side', 'low' );
 		add_meta_box( 'minor', 'Large Sub-Preview', 'minor_callback', 'husky100', 'side', 'low' );
-		add_meta_box( 'linkedin', 'LinkedIn link', 'linkedin_callback', 'husky100', 'side', 'low' );
+		add_meta_box( 'linkedin', 'Website/Page Link', 'linkedin_callback', 'husky100', 'side', 'low' );
 		
 		add_meta_box( 'tenet', 'Tenet', 'tenet_callback', 'husky100', 'normal', 'low' );
 		add_meta_box( 'quote', 'Quote', 'quote_callback', 'husky100', 'normal', 'low' );

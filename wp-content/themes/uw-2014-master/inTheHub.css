@@ -1,11 +1,20 @@
-#husky100 .full-bio .linkedin{
+#husky100 .full-bio .webSearch{
     /* background: url(../../plugins/hub100/assets/magWebSimple.png) no-repeat center center; */
     background: url(../../plugins/hub100/assets/magWeb.png) no-repeat center center;    
     background-size: contain;
 }
-#husky100 .full-bio .linkedin:hover,#husky100 .full-bio .linkedin:active{
+#husky100 .full-bio .webSearch:hover,#husky100 .full-bio .webSearch:active{
     /* background:url(../../plugins/hub100/assets/magWeb.png) no-repeat center center transparent; */
     background: url(../../plugins/hub100/assets/pointerWeb.png) no-repeat center center;
-    transform: scale(1.2, 1.7);
+    transform: scale(1.5, 1.5);
     background-size: 100%;
+}
+#husky100.logged-in .module-hero-image {
+    margin-top: 0px;
+}
+#husky100 .full-bio .bio-text{
+    max-height: 400px;
+}
+#husky100 .grid-item img{
+    width: unset;
 }

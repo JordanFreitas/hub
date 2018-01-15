@@ -32,7 +32,19 @@
 
     </head>
     <body <?php body_class(); ?> id="husky100">
-    <a href="#main_content" class="screen-reader-shortcut">Skip to main content</a>
+
+    <?php get_template_part('thinstrip'); ?>
+
+    <?php require( get_template_directory() . '/inc/template-functions.php' );
+          uw_dropdowns(); ?>
+    <?php get_template_part('thinstrip-no-sidebar'); ?>
+      <?php get_template_part( 'menu', 'mobile' ); ?>
+
+
+
+
+
+    <!-- <a href="#main_content" class="screen-reader-shortcut">Skip to main content</a>
 
     <div role="banner">
       <div id="thin-strip">
@@ -48,10 +60,14 @@
               <li><a href="http://uw.edu/alumni" class="slash" title="Alumi">Alumni</a></li>
           </ul>
       </div>
-    </div>
+    </div> -->
  
 
-    <div class="module-hero-image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>')">
+   <!-- pic outside hub vs inside hub -->
+    <!-- <div class="module-hero-image" style="    background-image: linear-gradient( rgba(0,0,0,.1), rgba(0, 0, 0, 0.3) ),url(http://depts.washington.edu/thehub/wordpress/wp-content/uploads/2013/08/TheHUB-Lawn-1.png)"> -->
+    <div class="module-hero-image" style="background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6) ),url(http://aiawa.org/wp-content/uploads/2013/11/Z35-2013B_UW-Husky-Union-Building-Benjamin-Benschneider_print.jpg)">
+
+
       <div class="container">     
         <div class="row">
           <h1><?php the_title(); ?></h1>
@@ -268,7 +284,7 @@
               </div>
               <div tabindex="0" class="full-bio" aria-hidden="true">
                 <h2><?php echo $person->post_title; ?>
-                <?php echo !empty($linkedin) ? '<a target="_blank" class="linkedin" href="' . $linkedin . '">LinkedIn</a>' : '' ?></h2>
+                <?php echo !empty($linkedin) ? '<a target="_blank" class="linkedin webSearch" href="' . $linkedin . '">LinkedIn</a>' : '' ?></h2>
                 <div class="bio-info">
                   <p><?php echo $hometown; ?></p>
                   <p><?php echo $major; ?></p>                
