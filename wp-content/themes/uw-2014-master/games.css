@@ -5,6 +5,8 @@
 .gamesTop{
     height: 600px;
     position: static;
+    background: url(https://depts.washington.edu/hubway/hub/wp-content/uploads/2018/01/home.png) center;
+    background-size: 100%;
 }
 .gamesVid{
     top: -68%;
