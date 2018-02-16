@@ -83,8 +83,6 @@
 
 <script>
   $(document).ready(function() {
-    //feed to parse
-    
     //feed for the entire hub
     //http://hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d
     var feed = "//hubres.uw.edu/hubcal/RSSFeeds.aspx?data=tA%2bhCNXmZerO%2bljV3wfOHfhHrmtFlH8CFNokuL51aHje9Ixz6L4Ym1H8wBXpgCvs%2bcAm0v4TEAQ%3d";
@@ -100,7 +98,6 @@
             $(data).find("item").each(function () { 
                 var feedInst = $(this);
                   eventItem = {
-                    // item:       feedInst.find("item").text(),
                     eTitle:       feedInst.find("title").text(),
                     eLink:        feedInst.find("link").text(),
                     eLoc: feedInst.find("mc\\:location, location").text(),
@@ -108,7 +105,6 @@
                     eStart: feedInst.find("mc\\:StartTime, StartTime").text(),
                     eEnd: feedInst.find("mc\\:EndTime, EndTime").text(),                
                   }
-                //   eventItem.eTitle.slice
                   var eTitleHTML = '<div id="eventTitle" class="eventSlideTitle col-md-8">' + eventItem.eTitle.slice(0,25) + '</div>';
                   
                   var months = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
@@ -126,22 +122,17 @@
                   if(eventItem.eStart.slice(-2) == "PM" && startTime24[0] < 12) startHour += 12;
                   if(eventItem.eStart.slice(-2) == "AM" && startTime24[0] == 12) startHour -= 12;
                   startTime24 = startHour + ':' + startMin + ':00';
-                  console.log(startTime24);
                   //End Time Format
                   var endTime24 =  eventItem.eEnd.split(":");
                   var endHour = parseInt(endTime24[0]);
-                  var endMin = endTime24[1].split(" ");
-                  endMin = endMin[0];
+                  var endMin = endTime24[1];
                   if(eventItem.eEnd.slice(-2) == "PM" && endTime24[0] < 12) endHour += 12;
                   if(eventItem.eEnd.slice(-2) == "AM" && endTime24[0] == 12) endHour -= 12;
                   endTime24 = endHour + ':' + endMin + ':00';
-                  console.log(endTime24);
-
                   var eDateHTML = '<div class="eventDayBox col-md-4"><div class="eventDay">' + eDay + '</div><div class="eventMonth">' + eMonth + '</div></div>';
                   var iconHTML = '<a  target="_blank" href="http://addtocalendar.com/atc/google?utz=-420&uln=en-US&vjs=1.5&e[0][date_start]=2017-8-05%2010%3A00%3A00&e[0][date_end]=2017-8-05%2017%3A15%3A00&e[0][timezone]=America%2FLos_Angeles&e[0][title]=Recruitment%20Counselor%20Training&e[0][location]=HUB%20332&e[0][organizer_email]=thehub%40uw.edu" class="imgEventSlide col-md-3 ic-calendar"></a>';
                   if(eDay.length == 1) eDay = '0' + eDay;
                   if(eMonthVal.length == 1) eMonthVal = '0' + eMonthVal;
-                  console.log(eDay);
                   var timeContent = '<var class="atc_date_start">' + eYear + '-' + eMonthVal + '-' + eDay + ' ' + startTime24 + '</var><var class="atc_date_end">' +  + eYear + '-' + eMonthVal + '-' + eDay + ' ' + endTime24 + '</var>';
                   var timeZone = '<var class="atc_timezone">America/Los_Angeles</var>';
                   var titleContent =  '<var class="atc_title">' + eventItem.eTitle + '</var>';

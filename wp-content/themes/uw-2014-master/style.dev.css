@@ -4931,14 +4931,24 @@ a.uw-custom-link:hover {
   display: none;
 }
 .uw-thinstrip .uw-wordmark {
+  /* Icon Stacked */
   display: block;
   position: absolute;
-  top: 12px;
-  left: 150px;
+  top: -15px;
+  left: 125px;
   text-indent: -9999px;
   width: 330px;
-  height: 24px;
-  background: url(assets/svg/uw-sprite.svg) no-repeat 0 -431px transparent;
+  height: 80px;
+  background: url(https://depts.washington.edu/hubway/hub/wp-content/uploads/2018/02/hublogo_hubSprite-copy-1.png) no-repeat;
+  /* Icon on one line */
+  /* display: block;
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  text-indent: -9999px;
+  width: 330px;
+  height: 80px;
+  background: url(https://depts.washington.edu/hubway/hub/wp-content/uploads/2018/02/hublogo_hubSprite-1.png) no-repeat; */
 }
 .uw-thinstrip div.align-right {
   float: right;

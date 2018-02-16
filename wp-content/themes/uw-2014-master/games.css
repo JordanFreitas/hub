@@ -114,28 +114,12 @@ a.uw-btn:before{
 .gameBlocks{
     height: 50vh;
     background-color: white;
-    /* color: whitesmoke;
-    font-family: "Encode Sans Compressed", sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 75px; */
-    /* color: #fff; */
+
     text-align: center;
     padding: 0px;
     overflow: hidden;
 }
-/* .bowl img {
-    max-width: 100%;
-    
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .bowl:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  } */
+
   .bowl{
     background-image:     url("https://1f05qp2e83qmgx1op26dvzig-wpengine.netdna-ssl.com/wp-content/uploads/2013/12/bowling.jpg");
   }
@@ -179,12 +163,7 @@ a.uw-btn:before{
     visibility: visible;
     opacity: 1;
 }
-/* .bowl:hover{
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.45), 
-        rgba(255, 255, 255, 0.45)
-    )
-} */
+
 .gaming{
     background-image: url("http://www.ampsych.com.au/wp-content/uploads/2017/01/Gaming-Addiction-Help-and-Therapy-Sydney.jpg");
     background-position: center;

@@ -3,7 +3,6 @@
   * Template Name: Home
   */
 ?>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
     <head>
@@ -33,12 +32,14 @@
     <!--[if gt IE 8]><!-->
 
     <body <?php body_class(); ?> >
+    <?php get_template_part('thinstrip'); ?>
+
+      <?php require( get_template_directory() . '/inc/template-functions.php' );
+      uw_dropdowns(); ?>
+
+      <?php get_template_part('thinstrip-no-sidebar'); ?>
+      <?php get_template_part( 'menu', 'mobile' ); ?>
     <!--<![endif]-->
-
- 
-
-
-
         <?php
           // Start the Loop.
           while ( have_posts() ) : the_post(); 
@@ -62,7 +63,6 @@
 <script src="//www.washington.edu/static/home/wp-content/themes/boundless/js/homepage.js?ec3099f" type="text/javascript"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzUXEGcqNsxHDM_0O8784P5qDTPVGcAvU&callback=initMap" ></script>
 <script>
-
 $(window).scroll(function(){
     $(".top-vid").css("opacity", 1 - $(window).scrollTop() / 250);
     $(".selectionHome").css("opacity", 1 - $(window).scrollTop() / 250);
@@ -75,26 +75,16 @@ function initMap() {
           zoom: 15
         });
 
-    //  var iconBase = 'https://furtaev.ru/preview/car_parking_map_pointer_small.png';
-
     var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(47.655498, -122.305189),
-    map: map,
-    title: 'Husky Union Building',
-    animation: google.maps.Animation.DROP
-  });
-  //    var parkingMarker = new google.maps.Marker({
-  //   position: new google.maps.LatLng(47.660474, -122.308831),
-  //   map: map,
-  //   title: 'Padelford Parking Garage',
-  //   animation: google.maps.Animation.DROP
-  //   // icon: iconBase
-  // });
+      position: new google.maps.LatLng(47.655498, -122.305189),
+      map: map,
+      title: 'Husky Union Building',
+      animation: google.maps.Animation.DROP
+    });
+    47.660474, -122.308831
+    marker.setMap(map);
 
-  47.660474, -122.308831
-  marker.setMap(map);
-
-   marker.addListener('click', function() {
+    marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
 

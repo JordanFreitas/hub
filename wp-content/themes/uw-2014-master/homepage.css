@@ -10949,9 +10949,8 @@ padding-top: 5%;
     visibility: visible;
   }
 .uw-body-home{
-padding-top: 0px !important;
-    width: 80%;
-    left: 10%;
+  padding-top: 0px !important;
+  width: 100%;
 }
 .hero-content-home{
 margin-top: 0px !important;
